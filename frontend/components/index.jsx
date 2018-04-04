@@ -1,16 +1,18 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 import SignupContainer from './session/signup_container';
 import NavbarContainer from './navbar/navbar_container';
+import About from './about';
+import Slices from './slices';
+import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 
 const Index = () => (
   <div>
-    <h1>hi mom and dad</h1>
-    <Switch>
-      <Route exact path="/signup" component={SignupContainer} />
-      <Route path="/" component={NavbarContainer} />
-    </Switch>
+    <Route path="/" component={NavbarContainer} />
+    <Route path="/" component={Slices} />
+    <ProtectedRoute path="/about" component={About} />
+    <AuthRoute path="/signup" component={SignupContainer} />
   </div>
 );
 
