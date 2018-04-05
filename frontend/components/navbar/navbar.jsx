@@ -6,11 +6,12 @@ export default ({ currentUser, logout}) => {
     <div>
       <p>Hello, { currentUser.username }!</p>
       <button onClick={logout}>Log out</button>
+      {/* eventually: userProfile dropdown */}
     </div>
   ) : (
     <div>
-      <Link to="/signup">Sign up</Link>
-      <Link to="/login">Log in</Link>
+      <button onClick={() => openModal('login')}>Login</button>
+      <button onClick={() => openModal('signup')}>Sign up</button>
     </div>
   )
 
