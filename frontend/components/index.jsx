@@ -11,8 +11,8 @@ import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 const Index = () => (
   <div>
     <Route path="/" component={NavbarContainer} />
-    <Route path="/" component={Slices} />
-    <ProtectedRoute path="/about" component={About} />
+    {/*<Route path="/" component={Slices} />*/}
+    {/*<ProtectedRoute path="/about" component={About} />*/}
     <AuthRoute path="/signup" component={SignupContainer} />
     <AuthRoute path="/login" component={LoginContainer} />
   </div>
