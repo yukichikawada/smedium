@@ -1,26 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default ({ currentUser, logout, openModal}) => {
-  const display = currentUser ? (
-    <div>
-      <p>Hello, { currentUser.username }!</p>
-      <button onClick={logout}>Log out</button>
-      {/* eventually: userProfile dropdown */}
-    </div>
-  ) : (
-    <div>
-      <button onClick={() => openModal('login')}>Login</button>
-      <button onClick={() => openModal('signup')}>Sign up</button>
-    </div>
-  )
-
-  return (
-    <header>
-      <h1>Smedium</h1>
+class Navbar extends React.Component {
+  display() {
+    let user = this.props.currentUser ? (
       <div>
-        {display}
+        <button onClick={this.props.logout}>Log out, { this.props.currentUser.username }</button>
       </div>
-    </header>
-  );
-};
+    ) : (
+      <div className="login-signup-buttons">
+        <a className="sign-in-button" onClick={() => this.props.openModal('login')}>Sign in</a>
+        <a className="sign-up-button" onClick={() => this.props.openModal('signup')}>Get Started</a>
+      </div>
+    )
+
+    return user;
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.currentUser) {
+      this.render();
+    }
+  }
+
+  render() {
+    return (
+      <header>
+        <div className="header-nav">
+          <div className="header-upgrade"><button>Upgrade</button></div>
+          <h1>Smedium</h1>
+          {this.display()}
+        </div>
+      </header>
+    );
+  }
+}
+
+export default Navbar;
