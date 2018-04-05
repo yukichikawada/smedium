@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default ({ currentUser, logout}) => {
+export default ({ currentUser, logout, openModal}) => {
   const display = currentUser ? (
     <div>
       <p>Hello, { currentUser.username }!</p>
