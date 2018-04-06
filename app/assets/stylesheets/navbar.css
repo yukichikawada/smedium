@@ -1,13 +1,30 @@
 .header-nav {
-  max-width: 1040px;
-  margin: auto;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: space-between;
   height: 65px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
 }
 
-.header-nav h1 {
+.header-nav {
+
+}
+
+.header-nav p {
   font-family: 'Abril Fatface', cursive;
+  font-size: 28px;
+}
+
+.button-link {
+  font-size: 11px;
+}
+
+.upgrade-button {
+  color: rgba(0,0,0,.54);
 }
 
 .login-signup-buttons {
@@ -16,9 +33,16 @@
   height: 37px;
 }
 
+.sign-in-button {
+  margin-right: 16px;
+}
+
 .sign-up-button {
   display: inline-block;
   vertical-align: middle;
-  line-height: 37px;
-  border-radius: 2px solid #03a87c;
+  line-height: 24px;
+  border: 1px solid #03a87c;
+  border-radius: 5px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
