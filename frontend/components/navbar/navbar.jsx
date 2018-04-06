@@ -9,8 +9,8 @@ class Navbar extends React.Component {
       </div>
     ) : (
       <div className="login-signup-buttons">
-        <Link to="/login" className="sign-in-button button-link" onClick={() => this.props.openModal('login')}>Sign in</Link>
-        <Link to="/signup" className="sign-up-button button-link" onClick={() => this.props.openModal('signup')}>Get started</Link>
+        <Link to="/login" className="sign-in-button button-link">Sign in</Link>
+        <Link to="/signup" className="sign-up-button button-link">Get started</Link>
       </div>
     )
 
