@@ -1,0 +1,32 @@
+.login-container {
+  background-color: #dceeef;
+  height: 50vh;
+  width: 75vh;
+}
+.login-content {
+  margin: auto;
+  text-align: center;
+  padding-top: 40px;
+}
+.login-welcome {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 22px;
+}
+.login-p {
+  width: 300px;
+  font-size: 14px;
+  color: rgba(0,0,0,.54);
+  font-weight: bold;
+  margin: auto;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+}
+input {
+  font-size: 14px;
+  width: 150px;
+  margin-top: 10px;
+}
