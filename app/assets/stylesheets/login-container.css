@@ -30,3 +30,9 @@ input {
   width: 150px;
   margin-top: 10px;
 }
+.demo-login-button {
+  font-size: 12px;
+  width: 150px;
+  margin-top: 10px;
+  padding-top: 2px;
+}

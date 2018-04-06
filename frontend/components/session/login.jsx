@@ -12,10 +12,11 @@ class Login extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
+  handleSubmit(e, type) {
+    if (!!!type) {
+      e.preventDefault();
+    }
     this.props.login(this.state)
-      .then(() => this.props.closeModal())
       .then(() => this.props.history.push('/'));
   }
 
@@ -27,6 +28,11 @@ class Login extends React.Component {
 
   closeModal() {
     this.props.history.push('/')
+  }
+
+  demoLogin(e) {
+    this.setState({ username: 'yves', password: 'password' },
+      () => this.handleSubmit(e, true))
   }
 
   render() {
@@ -60,6 +66,7 @@ class Login extends React.Component {
                   </label>
                 </div>
               </form>
+              <button className="demo-login-button" onClick={e => this.demoLogin(e)}>Demo Login</button>
               <p className="login-signup-link">No account? <Link to={"/signup"} className="switch-modal">Create one</Link>.</p>
               <p className="terms-of-service login-signup-link">Terms of Service</p>
             </div>
