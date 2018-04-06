@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Login extends React.Component {
   constructor(props) {
@@ -49,10 +50,12 @@ class Login extends React.Component {
                   onChange={this.update('password')} />
               </label>
               <label>
-                <input type="submit" value="Sign in" />
+                <input className="form-submit" type="submit" value="Sign in" />
               </label>
             </div>
           </form>
+          <p className="login-signup-link">No account? <Link to={"/signup"} className="switch-modal">Create one</Link>.</p>
+          <p className="terms-of-service login-signup-link">Terms of Service</p>
         </div>
       </div>
     );
