@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20180406202455) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_stories_on_author_id", unique: true
+    t.index ["comments_count"], name: "index_stories_on_comments_count"
+    t.index ["likes_count"], name: "index_stories_on_likes_count"
   end
 
   create_table "users", force: :cascade do |t|

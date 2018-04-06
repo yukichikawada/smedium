@@ -11,6 +11,8 @@ class CreateStories < ActiveRecord::Migration[5.1]
     end
 
     add_index :stories, :author_id, unique: true
+    add_index :stories, :comments_count
+    add_index :stories, :likes_count
     add_index :users, :username, unique: true
     add_index :users, :email, unique: true
   end
