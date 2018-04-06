@@ -17,7 +17,6 @@ export const fetchStories = () => (
   $.ajax({
     url: `/api/stories`,
     method: 'GET',
-    data: { story }
   })
 );
 
