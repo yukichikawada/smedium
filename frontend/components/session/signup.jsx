@@ -26,10 +26,14 @@ class Signup extends React.Component {
       .then(() => this.props.history.push('/'));
   }
 
+  closeModal() {
+    this.props.history.push('/')
+  }
+
   render() {
     return (
-      <div className="modal-background">
-        <div className="modal-child">
+      <div className="modal-background" onClick={() => this.closeModal()}>
+        <div className="modal-child" onClick={e => e.stopPropagation()}>
           <div className="login-container">
             <div className="login-content">
               <h3 className="login-welcome">Join Smedium.</h3>
