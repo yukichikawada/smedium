@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { login } from '../../actions/session_action';
 import { openModal, closeModal } from '../../actions/modal_action';
 import Login from './login';
@@ -10,4 +11,4 @@ const mapDispatchToProps = dispatch => ({
   closeModal: () => dispatch(closeModal()),
 });
 
-export default connect(null, mapDispatchToProps)(Login);
+export default withRouter(connect(null, mapDispatchToProps)(Login));

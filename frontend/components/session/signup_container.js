@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { createNewUser } from '../../actions/session_action';
 import { closeModal } from '../../actions/modal_action';
 import Signup from './signup';
@@ -8,4 +9,4 @@ const mapDispatchToProps = dispatch => ({
   closeModal: () => dispatch(closeModal()),
 });
 
-export default connect(null, mapDispatchToProps)(Signup);
+export default withRouter(connect(null, mapDispatchToProps)(Signup));
