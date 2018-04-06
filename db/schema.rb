@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180404161047) do
+ActiveRecord::Schema.define(version: 20180406202455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "stories", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "body", null: false
+    t.string "image_url"
+    t.integer "author_id", null: false
+    t.integer "comments_count", null: false
+    t.integer "likes_count", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_stories_on_author_id", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
@@ -22,6 +34,8 @@ ActiveRecord::Schema.define(version: 20180404161047) do
     t.string "session_token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
 end
