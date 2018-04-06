@@ -5,8 +5,8 @@ class CreateStories < ActiveRecord::Migration[5.1]
       t.text :body, null: false
       t.string :image_url
       t.integer :author_id, null: false
-      t.integer :comments_count, null: false
-      t.integer :likes_count, null: false
+      t.integer :comments_count, null: false, default: 0
+      t.integer :likes_count, null: false, default: 0
       t.timestamps
     end
 

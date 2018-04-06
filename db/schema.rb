@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 20180406202455) do
     t.text "body", null: false
     t.string "image_url"
     t.integer "author_id", null: false
-    t.integer "comments_count", null: false
-    t.integer "likes_count", null: false
+    t.integer "comments_count", default: 0, null: false
+    t.integer "likes_count", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_stories_on_author_id", unique: true
