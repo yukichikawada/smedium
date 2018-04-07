@@ -8,7 +8,14 @@ class StoriesIndex extends React.Component {
   render() {
     const stories = this.props.stories.map(story => {
       return (
-        <li key={story.id}>{story.title}</li>
+        <li key={story.id}>
+          <h4>
+            {story.title} - {story.author_id}
+          </h4>
+          <p>
+            {story.body}
+          </p>
+        </li>
       );
     });
 
