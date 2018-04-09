@@ -19,6 +19,16 @@
   font-size: 28px;
 }
 
+.heading-link {
+  font-family: 'Abril Fatface', cursive;
+  text-decoration: none;
+}
+.heading-link:visited {
+  font-family: 'Abril Fatface', cursive;
+  text-decoration: none;
+  color: black;
+}
+
 .button-link {
   font-size: 11px;
   text-decoration: none;

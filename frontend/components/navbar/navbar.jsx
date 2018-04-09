@@ -42,7 +42,7 @@ class Navbar extends React.Component {
       <header>
         <div className="header-nav">
           {this.upgrade()}
-          <p>Smedium</p>
+          <p><Link to='/' className="heading-link">Smedium</Link></p>
           {this.session()}
         </div>
       </header>

@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+import CreateStoryContainer from './create_story_form_container';
 
 class StoriesIndex extends React.Component {
   componentDidMount() {
@@ -24,6 +27,7 @@ class StoriesIndex extends React.Component {
         <ul>
           {stories}
         </ul>
+        <Link to='/newStory'>Write a new story</Link>
       </div>
     );
   }
