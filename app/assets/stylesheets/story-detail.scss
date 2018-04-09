@@ -1,0 +1,37 @@
+// .article-container {
+//   width: 700px;
+//   margin: auto;
+//   /* padding: 0 20px 0 20px; */
+// }
+// .story-bib {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+.article-container {
+  width: 700px;
+  margin: auto;
+
+
+  .story-bib {
+    display: flex;
+    justify-content: space-between;
+
+    .story-left {
+
+      .story-bib-author {
+        font-size: 12px;
+        line-height: 0.2;
+      }
+      .story-bib-date {
+        font-size: 12px;
+        line-height: 0.2;
+        color: rgba(0,0,0,.54);
+      }
+    }
+
+    .story-right {
+      align-self: center;
+    }
+  }
+}

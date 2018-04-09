@@ -33,7 +33,7 @@ class Api::StoriesController < ApplicationController
   end
 
   def destroy
-    stories.find(params[:id]).destroy
+    Story.find(params[:id]).destroy
   end
 
   private
