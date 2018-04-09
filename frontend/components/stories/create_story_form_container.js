@@ -9,9 +9,9 @@ const mapStateToProps = (state, ownProps) => {
     body: '',
     author_id: state.session.currentUser.id
   };
-  const formType = 'Write a Story';
+  const formType = 'Draft';
 
-  return { story, formType, currentUser };
+  return { story, formType };
 };
 
 const mapDispatchToProps = dispatch => ({

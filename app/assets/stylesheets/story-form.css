@@ -1,0 +1,27 @@
+.container {
+  width: 80vw;
+  margin: auto;
+}
+.partner-program {
+  font-size: 12px;
+  color: rgba(0,0,0,.54);
+}
+.story-form {
+  display: flex;
+  flex-direction: column;
+}
+.story-form-content {
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
+.story-form-title {
+  font-size: 24px;
+}
+.story-form-body {
+  height: 50vh;
+}
+.story-form-submit {
+  margin-left: 58px;
+}

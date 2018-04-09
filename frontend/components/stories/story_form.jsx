@@ -22,24 +22,34 @@ class StoryForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <h3>{this.props.formType}</h3>
-        <form onSubmit={this.handleSubmit}>
-          <label>
+      <div className="container">
+        <p className="partner-program">Learn about joining our Partner Program</p>
+        <hr></hr>
+        <div className="content">
+          <h3>{this.props.formType}</h3>
+          <form onSubmit={this.handleSubmit} className="story-form">
+
+
             <input
               type="text"
               value={this.state.title}
               placeholder="Title"
+              className="story-form-content story-form-title"
               onChange={this.update('title')} />
-          </label>
-          <label>
+
+
             <textarea
               value={this.state.body}
+              className="story-form-content story-form-body"
+              placeholder="Tell your story..."
               onChange={this.update('body')} />
-          </label>
 
-          <input type="submit" value={this.props.formType} />
-        </form>
+            <input
+              type="submit"
+              value="Publish"
+              className="story-form-submit story-form-item" />
+          </form>
+        </div>
       </div>
     );
   }
