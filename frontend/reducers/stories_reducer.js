@@ -4,7 +4,7 @@ export default (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_STORY:
-      return Object.assign({}, state, {[action.story.id]: action.story});
+      return Object.assign({}, {[action.story.id]: action.story});
     case RECEIVE_STORIES:
       return Object.assign({}, action.stories);
     case REMOVE_STORY:

@@ -36,7 +36,7 @@ export const deleteStory = storyId => dispatch => (
 
 export const fetchStory = storyId => dispatch => (
   StoryApiUtil.fetchStory(storyId)
-    .then(story => dispatch(receiveStory(storyId)))
+    .then(story => dispatch(receiveStory(story)))
 );
 
 export const fetchStories = () => dispatch => (
