@@ -7,6 +7,7 @@ import NavbarContainer from './navbar/navbar_container';
 import StoriesIndexContainer from './stories/stories_index_container';
 import CreateStoryContainer from './stories/create_story_form_container';
 import StoryDetailContainer from './stories/story_detail_container';
+import EditStoryFormContainer from './stories/edit_story_form_container';
 import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 
 const Index = () => (
@@ -16,6 +17,7 @@ const Index = () => (
     <Route path="/" component={NavbarContainer} />
     <Switch>
       <ProtectedRoute path="/newStory" component={CreateStoryContainer} />
+      <ProtectedRoute path="/stories/:storyId/edit" component={EditStoryFormContainer} />
       <Route path="/stories/:storyId" component={StoryDetailContainer} />
       <Route exact path="/" component={StoriesIndexContainer} />
     </Switch>
