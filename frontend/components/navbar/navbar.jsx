@@ -5,6 +5,7 @@ class Navbar extends React.Component {
   session() {
     let user = this.props.currentUser ? (
       <div>
+        <Link to="/newStory" className="link-new-story">Write a Story</Link>
         <button onClick={this.props.logout}>Log out, { this.props.currentUser.username }</button>
       </div>
     ) : (

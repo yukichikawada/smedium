@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import CreateStoryContainer from './create_story_form_container';
 import StoriesIndexItem from './stories_index_item';
@@ -21,7 +20,6 @@ class StoriesIndex extends React.Component {
         <ul className="">
           {stories}
         </ul>
-        <Link to='/newStory'>Write a new story</Link>
       </div>
     );
   }
