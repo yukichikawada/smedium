@@ -13,7 +13,7 @@ class StoriesIndex extends React.Component {
       return (
         <li key={story.id}>
           <h4>
-            {story.title} - {story.author}
+            {story.title} - {story.author} ~ {story.read_time} min read
           </h4>
           <p>
             {story.body}
