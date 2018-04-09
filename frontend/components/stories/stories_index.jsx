@@ -12,13 +12,13 @@ class StoriesIndex extends React.Component {
   render() {
     const stories = this.props.stories.map(story => {
       return (
-        <StoriesIndexItem key={story.id} story={story} />
+        <StoriesIndexItem key={story.id} story={story} className="stories-index-item"/>
       );
     });
 
     return (
-      <div>
-        <ul>
+      <div className="container">
+        <ul className="">
           {stories}
         </ul>
         <Link to='/newStory'>Write a new story</Link>
