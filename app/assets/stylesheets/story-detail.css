@@ -1,0 +1,14 @@
+.article-container {
+  width: 700px;
+  margin: auto;
+  /* padding: 0 20px 0 20px; */
+}
+.story-bib-author {
+  font-size: 12px;
+  line-height: 0.2;
+}
+.story-bib-date {
+  font-size: 12px;
+  line-height: 0.2;
+  color: rgba(0,0,0,.54);
+}

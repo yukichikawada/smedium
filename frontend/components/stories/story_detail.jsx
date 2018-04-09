@@ -18,10 +18,16 @@ class StoryDetail extends React.Component {
     }
 
     return(
-      <section className="container">
-        <h1>{story.title}</h1>
-        <p>{story.body}</p>
-      </section>
+      <article className="article-container">
+        <header className="story-bib">
+          <h4 className="story-bib-author">{story.author}</h4>
+          <h4 className="story-bib-date">{new Date(story.created_at).toDateString().slice(4, 16)} ~ {story.read_time} min read</h4>
+        </header>
+        <section>
+          <h1 className="article-story-title">{story.title}</h1>
+          <p className="article-story-body">{story.body}</p>
+        </section>
+      </article>
     )
   }
 }
