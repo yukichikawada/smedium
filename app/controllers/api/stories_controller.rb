@@ -17,16 +17,6 @@ class Api::StoriesController < ApplicationController
     end
   end
 
-  def edit
-    @story = story_of_user
-
-    if @story
-      render :show
-    else
-      flash[:errors] = @story.errors.full_messages
-    end
-  end
-
   def show
     @story = Story.find(params[:id])
     render :show
@@ -43,15 +33,10 @@ class Api::StoriesController < ApplicationController
   end
 
   def destroy
-    story_of_user.destroy
+    stories.find(params[:id]).destroy
   end
 
   private
-
-  def story_of_user
-    debugger
-    current_user.stories.find(params[:id])
-  end
 
   def story_params
     params.require(:story).permit(:title, :body, :author_id)
