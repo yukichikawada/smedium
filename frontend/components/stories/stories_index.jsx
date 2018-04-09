@@ -13,7 +13,7 @@ class StoriesIndex extends React.Component {
       return (
         <li key={story.id}>
           <h4>
-            {story.title} - {story.author_id}
+            {story.title} - {story.author}
           </h4>
           <p>
             {story.body}
