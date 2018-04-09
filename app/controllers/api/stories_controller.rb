@@ -33,8 +33,8 @@ class Api::StoriesController < ApplicationController
   end
 
   def update
-    @story = story_of_user
-
+    # @story = current_user.stories.find(params[:id])
+    @story = Story.find(params[:id])
     if @story.update_attributes(story_params)
       render :show
     else
@@ -49,6 +49,7 @@ class Api::StoriesController < ApplicationController
   private
 
   def story_of_user
+    debugger
     current_user.stories.find(params[:id])
   end
 
