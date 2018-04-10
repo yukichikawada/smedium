@@ -32,6 +32,32 @@
 
     .story-right {
       align-self: center;
+      .button-group {
+        display: flex;
+        justify-content: space-between;
+
+        .edit-button {
+          text-decoration: none;
+          color: #03a87c;
+          margin-right: 10px;
+        }
+        .edit-button:visited {
+          text-decoration: none;
+          color: #03a87c;
+        }
+
+        .delete-button {
+          font-size: 16px;
+          color: red;
+          // border: 2px solid red;
+          // border-radius: 4px;
+          // padding: 0 5px 0 5px;
+        }
+
+        .delete-button:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 }

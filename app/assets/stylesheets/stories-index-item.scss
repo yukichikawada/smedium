@@ -1,0 +1,45 @@
+.stories-index-item {
+  // border: 1px solid black;
+  margin-bottom: 40px;
+  max-width: 656px;
+  height: auto;
+
+  .story-item-link {
+    text-decoration: none;
+    display: flex;
+    .link-content {
+      margin-left: 20px;
+
+      .story-item-title {
+        color: black;
+        font-family: 'Roboto', sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .story-item-snippet {
+        margin-top: 6px;
+        font-size: 12px;
+        color: rgba(0,0,0,.54);
+        max-width: 400px;
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .story-item-author {
+        margin-top: 12px;
+        color: black;
+        line-height: 1;
+        font-size: 12px;
+      }
+      .story-item-stats {
+        margin-top: 4px;
+        line-height: 1;
+        color: rgba(0,0,0,.54);
+        font-size: 12px;
+      }
+      .story-item-stats {
+        font-weight: 900;
+      }
+    }
+  }
+}

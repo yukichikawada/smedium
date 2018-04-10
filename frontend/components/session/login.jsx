@@ -31,7 +31,7 @@ class Login extends React.Component {
   }
 
   demoLogin(e) {
-    this.setState({ username: 'yves', password: 'password' },
+    this.setState({ username: 'Yves', password: 'password' },
       () => this.handleSubmit(e, true))
   }
 
