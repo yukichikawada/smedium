@@ -55,6 +55,7 @@ class Login extends React.Component {
         <div className="modal-child" onClick={e => e.stopPropagation()}>
           <div className="login-container">
             <div className="login-content">
+              <p className="close-modal" onClick={() => this.closeModal()}>x</p>
               <h3 className="login-welcome">Welcome back.</h3>
               <p className="login-p">
                 Sign in to access your personalized homepage, follow authors and topics you love, and like stories that matter to you.

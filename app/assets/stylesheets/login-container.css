@@ -1,7 +1,7 @@
 .login-container {
   background-color: #dceeef;
   height: 500px;
-  width: 75vh;
+  width: 600px;
 }
 .login-content {
   margin: auto;
@@ -13,7 +13,7 @@
   font-size: 22px;
 }
 .login-p {
-  width: 300px;
+  width: 350px;
   font-size: 14px;
   color: rgba(0,0,0,.54);
   line-height: 1.5;
@@ -68,4 +68,16 @@ input {
 .error {
   color: red;
   padding-top: 10px;
+}
+.close-modal {
+  color: grey;
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-right: 15px;
+  padding-top: 10px;
+}
+.close-modal:hover {
+  cursor: pointer;
 }

@@ -31,6 +31,8 @@
 .link-new-story {
   text-decoration: none;
   color: black;
+  font-size: 12px;
+  padding-right: 10px;
 }
 .link-new-story:visited {
   color: black;
@@ -62,4 +64,7 @@
   border-radius: 5px;
   padding-left: 16px;
   padding-right: 16px;
+}
+.logout-button {
+  font-size: 12px;
 }

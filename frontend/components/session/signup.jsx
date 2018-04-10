@@ -49,6 +49,7 @@ class Signup extends React.Component {
         <div className="modal-child" onClick={e => e.stopPropagation()}>
           <div className="login-container">
             <div className="login-content">
+              <p className="close-modal" onClick={() => this.closeModal()}>x</p>
               <h3 className="login-welcome">Join Smedium.</h3>
               <p className="login-p">
                 Create an account to personalize your homepage, follow your favorite authors and publications, priase stories you love, and more.
