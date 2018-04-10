@@ -46,7 +46,7 @@ class Login extends React.Component {
   }
 
   componentWillUnmount() {
-    this.props.clearErrors();
+    this.props.clearSessionErrors();
   }
 
   render() {
@@ -84,8 +84,18 @@ class Login extends React.Component {
                   </label>
                 </div>
               </form>
-              <button className="demo-login-button" onClick={e => this.demoLogin(e)}>Demo Login</button>
-              <p className="login-signup-link">No account? <Link to={"/signup"} className="switch-modal">Create one</Link>.</p>
+              <button className="demo-login-button"
+                onClick={e => this.demoLogin(e)}>
+                Demo Login
+              </button>
+              <p className="login-signup-link">
+                No account?
+                <Link
+                  to={"/signup"}
+                  className="switch-modal">
+                  Create one
+                </Link>.
+              </p>
               <p className="terms-of-service login-signup-link">Terms of Service</p>
             </div>
           </div>

@@ -4,6 +4,7 @@ export const RECEIVE_STORY = 'RECEIVE_STORY';
 export const RECEIVE_STORIES = 'RECEIVE_STORIES';
 export const REMOVE_STORY = 'REMOVE_STORY';
 export const RECEIVE_STORY_ERRORS = 'RECEIVE_STORY_ERRORS';
+export const CLEAR_STORY_ERRORS = 'CLEAR_STORY_ERRORS';
 
 const receiveStory = story => ({
     type: RECEIVE_STORY,
@@ -22,14 +23,14 @@ const removeStory = storyId => ({
 
 export const createStory = story => dispatch => (
   StoryApiUtil.postStory(story)
-    .then(story => dispatch(receiveStory(story)))
-    // .fail(err => dispatch(receiveStoryErrors(err.responseJSON)))
+    .then(story => dispatch(receiveStory(story)),
+      (err => dispatch(receiveStoryErrors(err.responseJSON))))
 );
 
 export const updateStory = story => dispatch => (
   StoryApiUtil.updateStory(story)
-    .then(story => dispatch(receiveStory(story)))
-    // .fail(err => dispatch(receiveStoryErrors(err.responseJSON)))
+    .then(story => dispatch(receiveStory(story))
+      (err => dispatch(receiveStoryErrors(err.responseJSON))))
 );
 
 export const deleteStory = storyId => dispatch => (
@@ -51,3 +52,5 @@ const receiveStoryErrors = errors => ({
   type: RECEIVE_STORY_ERRORS,
   errors
 })
+
+export const clearStoryErrors = () => ({ type: CLEAR_STORY_ERRORS });

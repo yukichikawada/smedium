@@ -40,7 +40,7 @@ class Signup extends React.Component {
   }
 
   componentWillUnmount() {
-    this.props.clearErrors();
+    this.props.clearSessionErrors();
   }
 
   render() {

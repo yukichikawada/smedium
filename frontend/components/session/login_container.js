@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { login, clearErrors } from '../../actions/session_action';
+import { login, clearSessionErrors } from '../../actions/session_action';
 import Login from './login';
 
 const mapStateToProps = ({ errors }) => ({
@@ -10,7 +10,7 @@ const mapStateToProps = ({ errors }) => ({
 
 const mapDispatchToProps = dispatch => ({
   login: formUser => dispatch(login(formUser)),
-  clearErrors: () => dispatch(clearErrors())
+  clearSessionErrors: () => dispatch(clearSessionErrors())
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));

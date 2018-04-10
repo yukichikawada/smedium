@@ -19,12 +19,27 @@ class StoryForm extends React.Component {
     };
   }
 
+  componentWillUnmount() {
+    this.props.clearStoryErrors();
+  }
+
+  errors() {
+    if (this.props.errors) {
+      return (
+        this.props.errors.map(error => {
+          return (<li className="error" key={error}>{error}</li>);
+        })
+      );
+    }
+  }
+
   render() {
     return (
       <div className="container">
         <p className="partner-program">Learn about joining our Partner Program</p>
         <hr></hr>
         <div className="content">
+          <ul>{this.errors()}</ul>
           <h3>{this.props.formType}</h3>
           <form onSubmit={this.handleSubmit} className="story-form">
 
