@@ -29,6 +29,20 @@ class Signup extends React.Component {
     this.props.history.push('/')
   }
 
+  errors() {
+    if (this.props.errors) {
+      return (
+        this.props.errors.map(error => {
+          return (<li className="error" key={error}>{error}</li>);
+        })
+      );
+    }
+  }
+
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   render() {
     return (
       <div className="modal-background" onClick={() => this.closeModal()}>
@@ -39,12 +53,14 @@ class Signup extends React.Component {
               <p className="login-p">
                 Create an account to personalize your homepage, follow your favorite authors and publications, priase stories you love, and more.
               </p>
+              <ul>{this.errors()}</ul>
               <form onSubmit={this.handleSubmit}>
                 <div className="login-form">
                   <label>
                     <input
                       type="text"
                       placeholder="Username"
+                      className="login-input"
                       value={this.state.username}
                       onChange={this.update('username')} />
                   </label>
@@ -52,6 +68,7 @@ class Signup extends React.Component {
                     <input
                       type="email"
                       placeholder="Email"
+                      className="login-input"
                       value={this.state.email}
                       onChange={this.update('email')} />
                   </label>
@@ -59,6 +76,7 @@ class Signup extends React.Component {
                     <input
                       type="password"
                       placeholder="Password"
+                      className="login-input"
                       value={this.state.password}
                       onChange={this.update('password')} />
                   </label>

@@ -1,6 +1,6 @@
 .login-container {
   background-color: #dceeef;
-  height: 50vh;
+  height: 500px;
   width: 75vh;
 }
 .login-content {
@@ -16,6 +16,7 @@
   width: 300px;
   font-size: 14px;
   color: rgba(0,0,0,.54);
+  line-height: 1.5;
   font-weight: bold;
   margin: auto;
 }
@@ -24,6 +25,11 @@
   flex-direction: column;
   width: 300px;
   margin: auto;
+}
+.login-input {
+  padding: 10px;
+  border: 2px solid #dceeef;
+  border-radius: 8px;
 }
 input {
   font-size: 14px;
@@ -35,4 +41,31 @@ input {
   width: 150px;
   margin-top: 10px;
   padding-top: 2px;
+}
+
+.login-form {
+  padding-top: 20px;
+}
+
+.login-signup-link {
+  font-size: 12px;
+  padding-top: 20px;
+}
+
+.form-submit {
+  font-size: 20px;
+}
+
+.switch-modal {
+  text-decoration: none;
+  color: #239081;
+}
+
+.terms-of-service {
+  text-decoration: underline;
+  color: black;
+}
+.error {
+  color: red;
+  padding-top: 10px;
 }

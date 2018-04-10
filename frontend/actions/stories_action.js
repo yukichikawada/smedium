@@ -3,6 +3,7 @@ import * as StoryApiUtil from '../utils/stories_util';
 export const RECEIVE_STORY = 'RECEIVE_STORY';
 export const RECEIVE_STORIES = 'RECEIVE_STORIES';
 export const REMOVE_STORY = 'REMOVE_STORY';
+export const RECEIVE_STORY_ERRORS = 'RECEIVE_STORY_ERRORS';
 
 const receiveStory = story => ({
     type: RECEIVE_STORY,
@@ -22,11 +23,13 @@ const removeStory = storyId => ({
 export const createStory = story => dispatch => (
   StoryApiUtil.postStory(story)
     .then(story => dispatch(receiveStory(story)))
+    // .fail(err => dispatch(receiveStoryErrors(err.responseJSON)))
 );
 
 export const updateStory = story => dispatch => (
   StoryApiUtil.updateStory(story)
     .then(story => dispatch(receiveStory(story)))
+    // .fail(err => dispatch(receiveStoryErrors(err.responseJSON)))
 );
 
 export const deleteStory = storyId => dispatch => (
@@ -43,3 +46,8 @@ export const fetchStories = () => dispatch => (
   StoryApiUtil.fetchStories()
     .then(stories => dispatch(receiveStories(stories)))
 );
+
+const receiveStoryErrors = errors => ({
+  type: RECEIVE_STORY_ERRORS,
+  errors
+})

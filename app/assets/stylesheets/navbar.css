@@ -63,26 +63,3 @@
   padding-left: 16px;
   padding-right: 16px;
 }
-
-.login-form {
-  padding-top: 20px;
-}
-
-.login-signup-link {
-  font-size: 10px;
-  padding-top: 20px;
-}
-
-.form-submit {
-  font-size: 20px;
-}
-
-.switch-modal {
-  text-decoration: none;
-  color: #239081;
-}
-
-.terms-of-service {
-  text-decoration: underline;
-  color: black;
-}

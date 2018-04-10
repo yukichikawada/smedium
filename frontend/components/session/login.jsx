@@ -35,6 +35,20 @@ class Login extends React.Component {
       () => this.handleSubmit(e, true))
   }
 
+  errors() {
+    if (this.props.errors) {
+      return (
+        this.props.errors.map(error => {
+          return (<li className="error" key={error}>{error}</li>);
+        })
+      );
+    }
+  }
+
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   render() {
     return (
       <div className="modal-background" onClick={() => this.closeModal()}>
@@ -45,12 +59,14 @@ class Login extends React.Component {
               <p className="login-p">
                 Sign in to access your personalized homepage, follow authors and topics you love, and like stories that matter to you.
               </p>
+              <ul>{this.errors()}</ul>
               <form onSubmit={this.handleSubmit}>
                 <div className="login-form">
                   <label>
                     <input
                       type="text"
                       placeholder="Username"
+                      className="login-input"
                       value={this.state.username}
                       onChange={this.update('username')} />
                   </label>
@@ -58,6 +74,7 @@ class Login extends React.Component {
                     <input
                       type="password"
                       placeholder="Password"
+                      className="login-input"
                       value={this.state.password}
                       onChange={this.update('password')} />
                   </label>
