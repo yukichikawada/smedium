@@ -29,7 +29,7 @@ export const createStory = story => dispatch => (
 
 export const updateStory = story => dispatch => (
   StoryApiUtil.updateStory(story)
-    .then(story => dispatch(receiveStory(story))
+    .then(story => dispatch(receiveStory(story)),
       (err => dispatch(receiveStoryErrors(err.responseJSON))))
 );
 

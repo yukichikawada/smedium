@@ -2,7 +2,8 @@ import {
   RECEIVE_STORY,
   RECEIVE_STORIES,
   REMOVE_STORY,
-  RECEIVE_STORY_ERRORS
+  RECEIVE_STORY_ERRORS,
+  CLEAR_STORY_ERRORS,
 } from '../actions/stories_action';
 
 export default (state = {}, action) => {
@@ -16,8 +17,8 @@ export default (state = {}, action) => {
       let newState = Object.assign({}, state);
       delete newState[action.storyId];
       return newState;
-    case RECEIVE_STORY_ERRORS:
-      return Object.assign({}, state, action.errors);
+    // case RECEIVE_STORY_ERRORS:
+    //   return Object.assign({}, state, action.errors);
     default:
       return state;
   }
