@@ -18,34 +18,34 @@ Story.create({
   body: 'This is a story about the big bad wolf, actually',
   author_id: yves.id,
   read_time: 17
-  })
-Story.create({
-  title: '2:00PM Water Cooler 4/6/2018',
-  body: 'This is a story about the big bad wolf, as well. Funny his popularity',
-  author_id: lambert.id,
-  read_time: 23
-  })
+})
 Story.create({
   title: 'We Aint Got No History',
   body: 'The best blog about CFC. KTBFFH!!!!',
   author_id: david.id,
   read_time: 4
-  })
+})
+Story.create({
+  title: '2:00PM Water Cooler 4/6/2018',
+  body: 'This is a story about the big bad wolf, as well. Funny his popularity',
+  author_id: lambert.id,
+  read_time: 23
+})
 Story.create({
   title: "What it's like to Grow Up",
   body: 'Awesome rhythm and perfect flow. Someone pay her to write more',
   author_id: chelsea.id,
   read_time: 9
-  })
+})
 Story.create({
-  title: 'More tinyletters: a true love story',
+  title: 'More tinyletters: A Love Story',
   body: 'Another writer who delicately warms the soul',
   author_id: larissa.id,
   read_time: 17
-  })
+})
 Story.create({
   title: 'Stratechery and Other Small Victories',
   body: 'Subscription as a service, give him more subscribers',
   author_id: ben.id,
   read_time: 17
-  })
+})
