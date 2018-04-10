@@ -37,12 +37,13 @@ input {
   margin-top: 10px;
 }
 .demo-login-button {
-  font-size: 12px;
   width: 150px;
   margin-top: 10px;
   padding-top: 2px;
+  font-size: 16px;
+  background-color: #fff;
+  border-radius: 8px;
 }
-
 .login-form {
   padding-top: 20px;
 }
@@ -53,7 +54,9 @@ input {
 }
 
 .form-submit {
-  font-size: 20px;
+  font-size: 16px;
+  background-color: #fff;
+  border-radius: 8px;
 }
 
 .switch-modal {
