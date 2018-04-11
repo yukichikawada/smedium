@@ -11,17 +11,28 @@
   flex-direction: column;
 }
 .story-form-content {
-  padding: 20px;
+  padding: 20px 0 20px 0;
   width: 80%;
   margin: auto;
   margin-top: 20px;
 }
 .story-form-title {
   font-size: 24px;
+  border: 1px solid #fff;
 }
 .story-form-body {
   height: 50vh;
 }
 .story-form-submit {
-  margin-left: 58px;
+  margin-top: 40px;
+
+  border-radius: 8px;
+  font-size: 16px;
+}
+.submit-position {
+  display: flex;
+  justify-content: space-between;
+}
+.submit-left {
+  flex-basis: fill;
 }

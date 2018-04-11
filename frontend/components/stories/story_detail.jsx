@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReactHtmlParser from 'react-html-parser';
 
 class StoryDetail extends React.Component {
   constructor(props) {
@@ -67,7 +68,7 @@ class StoryDetail extends React.Component {
         </header>
         <section>
           <h1 className="article-story-title">{story.title}</h1>
-          <p className="article-story-body">{story.body}</p>
+          <div className="article-story-body">{ReactHtmlParser(story.body)}</div>
         </section>
       </article>
     )

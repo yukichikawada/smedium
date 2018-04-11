@@ -1,10 +1,12 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import ReactQuill from 'react-quill';
 
 class StoryForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.story;
+    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -17,6 +19,10 @@ class StoryForm extends React.Component {
     return (e) => {
       this.setState({[field]: e.target.value});
     };
+  }
+
+  handleChange(value) {
+    this.setState({body: value});
   }
 
   componentWillUnmount() {
@@ -52,16 +58,19 @@ class StoryForm extends React.Component {
               onChange={this.update('title')} />
 
 
-            <textarea
+            <ReactQuill
               value={this.state.body}
               className="story-form-content story-form-body"
               placeholder="Tell your story..."
-              onChange={this.update('body')} />
+              onChange={this.handleChange} />
 
-            <input
-              type="submit"
-              value="Publish"
-              className="story-form-submit story-form-item" />
+            <div className="submit-position">
+              <div className="submit-left"></div>
+              <input
+                type="submit"
+                value="Publish"
+                className="story-form-submit" />
+            </div>
           </form>
         </div>
       </div>
