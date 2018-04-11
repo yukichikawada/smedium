@@ -64,7 +64,7 @@ class StoryForm extends React.Component {
               placeholder="Tell your story..."
               onChange={this.handleChange} />
 
-            <div className="submit-position">
+            <div className="submit-position story-form-content">
               <div className="submit-left"></div>
               <input
                 type="submit"
