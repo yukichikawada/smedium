@@ -11,15 +11,14 @@ class StoryForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.story;
-    this.setState = { image_url: '' };
     this.handleChange = this.handleChange.bind(this);
-    this.handleImageUpload = this.handleImageUpload.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.action(this.state).then(() => this.props.history.push('/'));
+    debugger
   }
 
   update(field) {
@@ -46,8 +45,15 @@ class StoryForm extends React.Component {
     }
   }
 
-  handleImageUpload(files) {
-    let file = files[0];
+  onImageDrop(files) {
+    this.setState({
+      uploadedFile: files[0]
+    });
+    this.handleImageUpload(files[0])
+  }
+
+  handleImageUpload(file) {
+    let that = this;
     let upload = request.post(CLOUDINARY_UPLOAD_URL)
                         .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
                         .field('file', file);
@@ -57,16 +63,18 @@ class StoryForm extends React.Component {
       }
 
       if (response.body.secure_url !== '') {
-        debugger
-        this.setState({
+        // console.dir(that)
+        that.setState({
           image_url: response.body.secure_url
         });
       }
     });
+
   }
 
   render() {
     let dropzoneRef;
+    let that = this;
     return (
       <div className="container">
         <p className="partner-program">Learn about joining our Partner Program</p>
@@ -99,8 +107,8 @@ class StoryForm extends React.Component {
                   className="drop-hidden"
                   multiple={false}
                   accept="image/*"
-                  onDrop={this.handleImageUpload.bind(this)}>
-                  <p>Upload an image</p>
+                  onDrop={this.onImageDrop.bind(this)}>
+                  <p>Publish</p>
                 </Dropzone>
               </div>
               <div className="submit-right">

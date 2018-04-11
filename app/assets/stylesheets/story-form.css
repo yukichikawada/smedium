@@ -24,8 +24,9 @@
   height: 50vh;
 }
 .story-form-submit {
-  /* border-radius: 8px; */
+  border-radius: 8px;
   font-size: 16px;
+  background-color: #fffffe;
 }
 .submit-position {
   display: flex;
@@ -34,9 +35,12 @@
 .submit-left {
   flex-basis: fill;
 }
+.submit-left p {
+  font-size: 16px;
+}
 .image-button {
   /* font-size: 16px; */
-  background-color: white;
+  /* background-color: white; */
 }
 .drop-hidden {
   font-size: 13px;

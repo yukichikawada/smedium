@@ -17,35 +17,41 @@ Story.create({
   title: 'NC: Monopoly At The Breaking Point',
   body: 'This is a story about the big bad wolf, actually',
   author_id: yves.id,
+  image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523469586/u36kzlcfsoe0qdorolrn.jpg',
   read_time: 17
 })
 Story.create({
   title: 'We Aint Got No History',
   body: 'The best blog about CFC. KTBFFH!!!!',
   author_id: david.id,
+  image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523468747/ftrtdcbnylu1w8wrj1fi.jpg',
   read_time: 4
 })
 Story.create({
   title: '2:00PM Water Cooler 4/6/2018',
   body: 'This is a story about the big bad wolf, as well. Funny his popularity',
   author_id: lambert.id,
+  image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523469657/l0pzpghxbnwevti1vi9z.jpg',
   read_time: 23
 })
 Story.create({
   title: "What it's like to Grow Up",
   body: 'Awesome rhythm and perfect flow. Someone pay her to write more',
   author_id: chelsea.id,
+  image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523464310/sample.jpg',
   read_time: 9
 })
 Story.create({
   title: 'More tinyletters: A Love Story',
   body: 'Another writer who delicately warms the soul',
   author_id: larissa.id,
+  image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523469282/wjc0aqrn64pju4zrlvlo.jpg',
   read_time: 17
 })
 Story.create({
   title: 'Stratechery and Other Small Victories',
   body: 'Subscription as a service, give him more subscribers',
   author_id: ben.id,
+  image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523469500/ndmi8mztwr1vocow0fgk.jpg',
   read_time: 17
 })

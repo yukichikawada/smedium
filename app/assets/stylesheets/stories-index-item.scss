@@ -3,6 +3,9 @@
   margin-bottom: 40px;
   max-width: 656px;
   height: auto;
+  max-height: 100px;
+  display: flex;
+  justify-content: space-between;
 
   .story-item-link {
     text-decoration: none;
@@ -40,6 +43,16 @@
       .story-item-stats {
         font-weight: 900;
       }
+    }
+  }
+
+  .image-container {
+    box-sizing: content-box;
+    max-width: 200px;
+
+    .card-horizontal {
+      max-width: inherit;
+      max-height: inherit;
     }
   }
 }
