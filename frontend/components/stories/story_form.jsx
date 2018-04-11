@@ -17,8 +17,8 @@ class StoryForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.action(this.state).then(() => this.props.history.push('/'));
     debugger
+    this.props.action(this.state).then(() => this.props.history.push('/'));
   }
 
   update(field) {
@@ -46,9 +46,6 @@ class StoryForm extends React.Component {
   }
 
   onImageDrop(files) {
-    this.setState({
-      uploadedFile: files[0]
-    });
     this.handleImageUpload(files[0])
   }
 
