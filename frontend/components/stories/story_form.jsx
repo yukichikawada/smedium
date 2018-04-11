@@ -1,12 +1,19 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import ReactQuill from 'react-quill';
+import Dropzone from 'react-dropzone';
+import request from 'superagent';
+
+const CLOUDINARY_UPLOAD_PRESET = 'hylawjlm';
+const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dh5e4xxbr/upload';
 
 class StoryForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.story;
+    this.setState = { image_url: '' };
     this.handleChange = this.handleChange.bind(this);
+    this.handleImageUpload = this.handleImageUpload.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -39,7 +46,27 @@ class StoryForm extends React.Component {
     }
   }
 
+  handleImageUpload(files) {
+    let file = files[0];
+    let upload = request.post(CLOUDINARY_UPLOAD_URL)
+                        .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
+                        .field('file', file);
+    upload.end((err, response) => {
+      if (err) {
+        console.error(err);
+      }
+
+      if (response.body.secure_url !== '') {
+        debugger
+        this.setState({
+          image_url: response.body.secure_url
+        });
+      }
+    });
+  }
+
   render() {
+    let dropzoneRef;
     return (
       <div className="container">
         <p className="partner-program">Learn about joining our Partner Program</p>
@@ -65,11 +92,23 @@ class StoryForm extends React.Component {
               onChange={this.handleChange} />
 
             <div className="submit-position story-form-content">
-              <div className="submit-left"></div>
-              <input
-                type="submit"
-                value="Publish"
-                className="story-form-submit" />
+              <div className="submit-left">
+                <Dropzone
+                  ref={(node) => { dropzoneRef = node; }}
+                  onDrop={(accepted, rejected) => { alert(accepted) }}
+                  className="drop-hidden"
+                  multiple={false}
+                  accept="image/*"
+                  onDrop={this.handleImageUpload.bind(this)}>
+                  <p>Upload an image</p>
+                </Dropzone>
+              </div>
+              <div className="submit-right">
+                <input
+                  type="submit"
+                  value="Publish"
+                  className="story-form-submit" />
+              </div>
             </div>
           </form>
         </div>

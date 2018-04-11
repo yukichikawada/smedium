@@ -24,7 +24,7 @@
   height: 50vh;
 }
 .story-form-submit {
-  border-radius: 8px;
+  /* border-radius: 8px; */
   font-size: 16px;
 }
 .submit-position {
@@ -33,4 +33,21 @@
 }
 .submit-left {
   flex-basis: fill;
+}
+.image-button {
+  /* font-size: 16px; */
+  background-color: white;
+}
+.drop-hidden {
+  font-size: 13px;
+  margin-top: 10px;
+  border: 1px solid lightgrey;
+  padding: 2px 30px 4px 30px;
+  border-radius: 5px;
+}
+.drop-hidden p {
+  text-align: center;
+}
+.drop-hidden:hover {
+  cursor: default;
 }
