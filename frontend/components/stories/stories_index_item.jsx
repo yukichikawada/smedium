@@ -13,8 +13,7 @@ const StoriesIndexItem = ({ story }) => (
         <p className="story-item-stats">{new Date(story.created_at).toDateString().slice(4, 10)} ~ {story.read_time} min read</p>
       </div>
     </Link>
-    <div className="image-container">
-      <img src={story.image_url} className="card-horizontal"/>
+    <div className="image-container" style={{backgroundImage: `url(${story.image_url})`}}>
     </div>
   </li>
 );

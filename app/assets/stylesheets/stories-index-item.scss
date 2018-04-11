@@ -1,9 +1,8 @@
 .stories-index-item {
   // border: 1px solid black;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   max-width: 656px;
-  height: auto;
-  max-height: 100px;
+  height: 152px;
   display: flex;
   justify-content: space-between;
 
@@ -47,12 +46,10 @@
   }
 
   .image-container {
-    box-sizing: content-box;
-    max-width: 200px;
-
-    .card-horizontal {
-      max-width: inherit;
-      max-height: inherit;
-    }
+    height: 138px;
+    width: 138px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
