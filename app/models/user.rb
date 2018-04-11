@@ -10,7 +10,9 @@ class User < ApplicationRecord
 
   before_validation :ensure_token
 
-  has_many :stories
+  has_many :stories,
+    foreign_key: :author_id,
+    class_name: 'Story'
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
