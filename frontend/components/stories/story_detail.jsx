@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import ReactHtmlParser from 'react-html-parser';
 
 import CommentsIndexItem from '../comments/comments_index_item';
+import CommentFormContainer from '../comments/comment_form_container';
 
 class StoryDetail extends React.Component {
   constructor(props) {
@@ -85,6 +86,7 @@ class StoryDetail extends React.Component {
           <div className="article-story-body">{ReactHtmlParser(story.body)}</div>
         </section>
         <section className="article-comments-container">
+          <CommentFormContainer />
           <ul>
             {this.comments()}
           </ul>
