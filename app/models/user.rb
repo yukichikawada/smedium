@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
   attr_reader :password
 
-  has_many :stories
+  has_many :stories, :comments
 
   # :comments, :follows, :story_likes, :comment_likes
 

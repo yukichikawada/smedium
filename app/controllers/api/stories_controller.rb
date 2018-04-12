@@ -23,8 +23,8 @@ class Api::StoriesController < ApplicationController
   end
 
   def update
-    # @story = current_user.stories.find(params[:id])
-    @story = Story.find(params[:id])
+    @story = current_user.stories.find(params[:id])
+    # @story = Story.find(params[:id])
     if @story.update_attributes(story_params)
       render :show
     else
@@ -33,7 +33,7 @@ class Api::StoriesController < ApplicationController
   end
 
   def destroy
-    Story.find(params[:id]).destroy
+    current_user.stories.find(params[:id]).destroy
   end
 
   private

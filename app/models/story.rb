@@ -7,6 +7,7 @@ class Story < ApplicationRecord
     foreign_key: :author_id,
     class_name: 'User'
   # has_many :likes, :comments, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   def calc_read_time
     if self.read_time == nil
