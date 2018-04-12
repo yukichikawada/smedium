@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ReactHtmlParser from 'react-html-parser';
 
+import CommentsIndexItem from '../comments/comments_index_item';
+
 class StoryDetail extends React.Component {
   constructor(props) {
     super(props);
@@ -52,10 +54,7 @@ class StoryDetail extends React.Component {
     if (this.props.story.comments) {
       return (
         this.props.story.comments.map(com => (
-            <li key={com.id}>
-              <p>{com.body}</p>
-              <h5>{com.author}</h5>
-            </li>
+            <CommentsIndexItem key={com.id} comment={com} />
           )
         )
       );
