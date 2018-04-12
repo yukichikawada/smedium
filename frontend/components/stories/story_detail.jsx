@@ -48,8 +48,22 @@ class StoryDetail extends React.Component {
       }
   }
 
+  comments() {
+    if (this.props.story.comments) {
+      return (
+        this.props.story.comments.map(com => (
+            <li key={com.id}>
+              <p>{com.body}</p>
+              <h5>{com.author}</h5>
+            </li>
+          )
+        )
+      );
+    }
+  }
+
   render() {
-    const story = this.props.story;
+    const {story} = this.props;
 
     if (!story) {
       return null;
@@ -69,6 +83,11 @@ class StoryDetail extends React.Component {
         <section>
           <h1 className="article-story-title">{story.title}</h1>
           <div className="article-story-body">{ReactHtmlParser(story.body)}</div>
+        </section>
+        <section>
+          <ul>
+            {this.comments()}
+          </ul>
         </section>
       </article>
     )
