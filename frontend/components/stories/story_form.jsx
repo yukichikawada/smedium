@@ -98,15 +98,17 @@ class StoryForm extends React.Component {
 
             <div className="submit-position story-form-content">
               <div className="submit-left">
-                <Dropzone
-                  ref={(node) => { dropzoneRef = node; }}
-                  onDrop={(accepted, rejected) => { alert(accepted) }}
-                  className="drop-hidden"
-                  multiple={false}
-                  accept="image/*"
-                  onDrop={this.onImageDrop.bind(this)}>
-                  <p>Publish</p>
-                </Dropzone>
+                <div>
+                  <Dropzone
+                    ref={(node) => { dropzoneRef = node; }}
+                    onDrop={(accepted, rejected) => { alert(accepted) }}
+                    className="drop-hidden"
+                    multiple={false}
+                    accept="image/*"
+                    onDrop={this.onImageDrop.bind(this)}>
+                    <p>Upload Headline Image</p>
+                  </Dropzone>
+                </div>
               </div>
               <div className="submit-right">
                 <input

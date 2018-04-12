@@ -15,7 +15,7 @@ ben = User.create({username: 'Ben', password: 'password', email: 'ben@thompson.c
 
 Story.create({
   title: 'NC: Monopoly At The Breaking Point',
-  body: 'This is a story about the big bad wolf, actually',
+  body: 'This is a story about the big bad wolf, actually. Sometimes confused with the pigs that go to market. None of these little pigs made it home.',
   author_id: yves.id,
   image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523469586/u36kzlcfsoe0qdorolrn.jpg',
   read_time: 17

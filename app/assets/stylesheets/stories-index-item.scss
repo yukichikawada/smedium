@@ -1,8 +1,8 @@
 .stories-index-item {
   // border: 1px solid black;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   max-width: 656px;
-  height: 152px;
+  height: 120px;
   display: flex;
   justify-content: space-between;
 
@@ -11,24 +11,31 @@
     display: flex;
     .link-content {
       margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
-      .story-item-title {
-        color: black;
-        font-family: 'Roboto', sans-serif;
-        font-size: 24px;
-        font-weight: bold;
+      .upper-bib {
+        flex-basis: fill;
+
+        .story-item-title {
+          color: black;
+          font-family: 'Roboto', sans-serif;
+          font-size: 24px;
+          font-weight: bold;
+        }
+        .story-item-snippet {
+          margin-top: 16px;
+          font-size: 12px;
+          color: rgba(0,0,0,.54);
+          max-width: 400px;
+          width: auto;
+          display: flex;
+          flex-wrap: wrap;
+        }
       }
-      .story-item-snippet {
-        margin-top: 6px;
-        font-size: 12px;
-        color: rgba(0,0,0,.54);
-        max-width: 400px;
-        width: auto;
-        display: flex;
-        flex-wrap: wrap;
-      }
+
       .story-item-author {
-        margin-top: 12px;
         color: black;
         line-height: 1;
         font-size: 12px;
@@ -46,8 +53,8 @@
   }
 
   .image-container {
-    height: 138px;
-    width: 138px;
+    height: 120px;
+    width: 120px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
