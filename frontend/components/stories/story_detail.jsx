@@ -83,6 +83,8 @@ class StoryDetail extends React.Component {
         </header>
         <section>
           <h1 className="article-story-title">{story.title}</h1>
+          <div className="story-detail-image" style={{backgroundImage: `url(${story.image_url})`}} >
+          </div>
           <div className="article-story-body">{ReactHtmlParser(story.body)}</div>
         </section>
         <section className="article-comments-container">
