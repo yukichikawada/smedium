@@ -53,11 +53,12 @@ class StoryDetail extends React.Component {
   comments() {
     if (this.props.story.comments) {
       return (
-        this.props.story.comments.map(com => (
+        this.props.story.comments.map(com => {
+          return (
             <CommentsIndexItem key={com.id} comment={com} />
           )
-        )
-      );
+        })
+      )
     }
   }
 
@@ -83,7 +84,7 @@ class StoryDetail extends React.Component {
           <h1 className="article-story-title">{story.title}</h1>
           <div className="article-story-body">{ReactHtmlParser(story.body)}</div>
         </section>
-        <section>
+        <section className="article-comments-container">
           <ul>
             {this.comments()}
           </ul>

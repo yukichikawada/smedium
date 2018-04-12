@@ -1,0 +1,40 @@
+.comment-card {
+  background-color: white;
+  border: 1px solid lightgrey;
+  padding: 15px;
+  margin-bottom: 20px;
+
+  .comment-header {
+    display: flex;
+    align-items: center;
+    .comment-card-profile-pic {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .comment-card-bib {
+      margin-left: 10px;
+
+      .comment-author {
+        color: grey;
+        line-height: 0.5;
+      }
+      .comment-date {
+        color: green;
+        line-height: 0.5;
+      }
+    }
+  }
+  .comment-content {
+    p {
+      color: #3e4040;
+      font-family: 'Merriweather', serif;
+      font-size: 14px;
+    }
+
+    padding: 20px 0 20px 0;
+  }
+}

@@ -60,4 +60,20 @@
       }
     }
   }
+  .article-story-title {
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+  }
+
+  .article-story-body {
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    color: #3e4040;
+  }
+
+  .article-comments-container {
+    width: 640px;
+    margin: auto;
+    padding-top: 50px;
+  }
 }
