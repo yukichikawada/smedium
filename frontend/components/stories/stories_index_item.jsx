@@ -10,7 +10,7 @@ const StoriesIndexItem = ({ story }) => (
           <p className="story-item-title">{story.title}</p>
           <div className="story-item-snippet">
             <p>
-              {ReactHtmlParser(story.body.slice(0,130))}
+              {ReactHtmlParser(story.body.slice(0,130))}...
             </p>
           </div>
         </div>
