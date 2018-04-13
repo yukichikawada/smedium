@@ -25,16 +25,21 @@ class CommentForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="comment-form-container">
         <form onSubmit={this.handleSubmit}>
           <ReactQuill
             value={this.state.body}
             placeholder="Be nice..."
+            className="quill-body"
             onChange={this.handleChange} />
 
-          <input
-            type="submit"
-            value="Add Comment" />
+          <div className="submit-container">
+            <div className="submit-left"></div>
+            <input
+              type="submit"
+              className="comment-submit"
+              value="Add Comment" />
+          </div>
         </form>
       </div>
     )

@@ -1,0 +1,26 @@
+.comment-form-container {
+  margin-bottom: 20px;
+
+  .quill-body {
+    height: 100px;
+  }
+
+  .comment-submit {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    background-color: white;
+    color: green;
+    border-radius: 4px;
+    border: lightgrey solid 2px;
+    font-size: 20px;
+  }
+
+  .submit-container {
+    display: flex;
+    justify-content: space-between;
+
+    .submit-left {
+      flex-basis: fill;
+    }
+  }
+}

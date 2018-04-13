@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ReactHtmlParser from 'react-html-parser';
+
 const CommentsIndexItem = ({ comment }) => (
   <li className="comment-card">
     <div className="comment-header">
@@ -11,7 +13,7 @@ const CommentsIndexItem = ({ comment }) => (
     </div>
     <div className="comment-content">
       <p>
-        {comment.body}
+        {ReactHtmlParser(comment.body)}
       </p>
     </div>
   </li>
