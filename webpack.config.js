@@ -1,6 +1,9 @@
 var path = require('path');
 var webpack = require('webpack');
 
+var plugins = [];
+var devPlugins = [];
+
 var prodPlugins = [
   new webpack.DefinePlugin({
     'process.env': {
