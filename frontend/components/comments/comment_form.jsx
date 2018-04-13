@@ -15,8 +15,8 @@ class CommentForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.action(this.state)
-      .then(() => this.state.body = '');
+    this.props.action(this.state);
+    this.setState({body: ''});
   }
 
   handleChange(value) {
