@@ -93,7 +93,7 @@ class Login extends React.Component {
                 <Link
                   to={"/signup"}
                   className="switch-modal">
-                  Create one
+                  &nbsp;Create one
                 </Link>.
               </p>
               <p className="terms-of-service login-signup-link">Terms of Service</p>
