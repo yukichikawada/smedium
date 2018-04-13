@@ -73,7 +73,7 @@ class StoryForm extends React.Component {
     let that = this;
     return (
       <div className="container">
-        <p className="partner-program">Learn about joining our Partner Program</p>
+        <p className="partner-program"></p>
         <hr></hr>
         <div className="content">
           <ul>{this.errors()}</ul>

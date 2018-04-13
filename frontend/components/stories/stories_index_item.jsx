@@ -9,9 +9,7 @@ const StoriesIndexItem = ({ story }) => (
         <div className="upper-bib">
           <p className="story-item-title">{story.title}</p>
           <div className="story-item-snippet">
-            <p>
-              {ReactHtmlParser(story.body.slice(0,130))}...
-            </p>
+            {ReactHtmlParser(story.body.slice(0,130))}...
           </div>
         </div>
         <div className="lower-bib">
