@@ -6,7 +6,7 @@ export const REMOVE_STORY = 'REMOVE_STORY';
 export const RECEIVE_STORY_ERRORS = 'RECEIVE_STORY_ERRORS';
 export const CLEAR_STORY_ERRORS = 'CLEAR_STORY_ERRORS';
 
-const receiveStory = story => ({
+export const receiveStory = story => ({
     type: RECEIVE_STORY,
     story
 });

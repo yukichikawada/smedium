@@ -4,7 +4,11 @@ import ReactQuill from 'react-quill';
 class CommentForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {body: ''};
+    this.state = {
+      body: '',
+      author_id: this.props.currentUser.id,
+      story_id: this.props.storyId
+    };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -12,8 +16,7 @@ class CommentForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.action(this.state)
-      .then(() => this.state.body = '')
-      .then(() => this.props.fetchComments());
+      .then(() => this.state.body = '');
   }
 
   handleChange(value) {

@@ -24,5 +24,15 @@ const Protected = ({ component: Component, path, loggedIn }) => (
   />
 );
 
+const SemiProtected = ({ component: Component, path, loggedIn }) => (
+  <Route
+    path={path}
+    render={props => (
+      loggedIn ? <Component {...props} /> : null
+    )}
+  />
+);
+
 export const AuthRoute = withRouter(connect(mapStateToProps)(Auth));
 export const ProtectedRoute = withRouter(connect(mapStateToProps)(Protected));
+export const SemiProtectedRoute = withRouter(connect(mapStateToProps)(SemiProtected));

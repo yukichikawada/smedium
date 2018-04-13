@@ -4,6 +4,7 @@ import ReactHtmlParser from 'react-html-parser';
 
 import CommentsIndexItem from '../comments/comments_index_item';
 import CommentFormContainer from '../comments/comment_form_container';
+import { SemiProtectedRoute } from '../../utils/route_util';
 
 class StoryDetail extends React.Component {
   constructor(props) {
@@ -54,9 +55,10 @@ class StoryDetail extends React.Component {
   comments() {
     if (this.props.story.comments) {
       return (
-        this.props.story.comments.map(com => {
+        Object.keys(this.props.story.comments).map(id => {
           return (
-            <CommentsIndexItem key={com.id} comment={com} />
+            <CommentsIndexItem key={id} 
+              comment={this.props.story.comments[id]} />
           )
         })
       )
@@ -88,7 +90,7 @@ class StoryDetail extends React.Component {
           <div className="article-story-body">{ReactHtmlParser(story.body)}</div>
         </section>
         <section className="article-comments-container">
-          <CommentFormContainer />
+          <SemiProtectedRoute component={CommentFormContainer} path={`/stories/${story.id}`} storyId={story.id} />
           <ul>
             {this.comments()}
           </ul>

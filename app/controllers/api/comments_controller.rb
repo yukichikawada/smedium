@@ -3,7 +3,9 @@ class Api::CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
 
     if @comment.save
-      render :show
+      @story = Story.find(params[:comment][:story_id])
+      @comments = @story.comments
+      render "api/stories/show"
     else
       render json: @comment.errors.full_messages, status: 402
     end

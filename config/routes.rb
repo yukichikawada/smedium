@@ -8,6 +8,6 @@ Rails.application.routes.draw do
     resources :stories, only: [:create, :destroy, :show, :update, :index] do
       resources :comments, only: [:create, :index]
     end
-    resources :comments, only: [:destroy, :index]
+    resources :comments, only: [:create, :destroy, :index]
   end
 end

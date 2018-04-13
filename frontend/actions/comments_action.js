@@ -1,10 +1,11 @@
 import { postComment } from '../utils/comments_util';
+import { receiveStory } from './stories_action';
 
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
 export const RECEIVE_COMMENTS = 'RECEIVE_COMMENTS';
 
 export const createComment = comment => dispatch => (
-  postComment(comment).then(comment => dispatch(receiveComment(comment)))
+  postComment(comment).then(comment => dispatch(receiveStory(comment)))
 );
 
 export const fetchComment = commentId => dispatch => (
