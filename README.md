@@ -1,24 +1,55 @@
-# README
+# Smedium
+---
+## Introduction
+---
+> Smedium is a Medium clone for thoughtful blogging, elegant design, and engaging community.
+> * [MVP](https://github.com/yukichikawada/smedium/wiki/mvp)
+> * [Database Schema](https://github.com/yukichikawada/smedium/wiki/database-schema)
+> * [Routes](https://github.com/yukichikawada/smedium/wiki/routes)
+> * [Sample State](https://github.com/yukichikawada/smedium/wiki/sample-sate)
+> * [Component Hierarchy](https://github.com/yukichikawada/smedium/wiki/component-hierarchy-with-wireframes)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Technologies User
+---
 
-Things you may want to cover:
+#### Backend
+> * Ruby On Rails
+> * jBuilder
+> * PostgreSQL RDBMS
+> * Heroku
 
-* Ruby version
 
-* System dependencies
+#### Frontend
+> * React-Redux
+> * JavaScript
+> * SCSS/CSS
+> * npm
+> * Webpack
 
-* Configuration
 
-* Database creation
+#### Storage
+> * Cloudinary for headline pictures uploaded by Users
 
-* Database initialization
 
-* How to run the test suite
+## Features and Functionality
+---
+> * BCrypt Auth limits functionality of unregistered Users
+> * RichText Editing with Quill preserves writing styling for Stories
+> * Stories can receive Comments
 
-* Services (job queues, cache servers, search engines, etc.)
+> RichText Editing adds html to writing, an html parser transforms ```string``` to jsx
+ ```javascript
+ import ReactHtmlParser from 'react-html-parser';
+ ...
+<div className="story-item-snippet">
+  {ReactHtmlParser(story.body.slice(0,130))}...
+</div>
+```
 
-* Deployment instructions
 
-* ...
+
+## Future Direction
+---
+> * Likes on Stories
+> * Follow Users
+> * Filtered Feeds on Category
