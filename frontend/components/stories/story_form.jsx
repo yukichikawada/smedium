@@ -54,12 +54,7 @@ class StoryForm extends React.Component {
                         .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
                         .field('file', file);
     upload.end((err, response) => {
-      if (err) {
-        console.error(err);
-      }
-
       if (response.body.secure_url !== '') {
-        // console.dir(that)
         that.setState({
           image_url: response.body.secure_url
         });

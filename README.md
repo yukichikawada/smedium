@@ -33,13 +33,13 @@
 
 ## Features and Functionality
 
-> * BCrypt Auth limits functionality of unregistered Users
-> * RichText Editing with Quill preserves writing styling for Stories
-> * Stories can receive Comments
+ * BCrypt Auth limits functionality of unregistered Users
+ * RichText Editing with Quill preserves writing styling for Stories
+ * Stories can receive Comments
 
 ![](https://github.com/yukichikawada/smedium/blob/master/app/assets/images/comment-form.png)
 
-> RichText Editing adds html to writing, an html parser transforms ```string``` to jsx
+ RichText Editing adds html to writing, an html parser transforms ```string``` to jsx
  ```javascript
  import ReactHtmlParser from 'react-html-parser';
  ...
@@ -52,6 +52,6 @@
 
 ## Future Direction
 
-> * Likes on Stories
-> * Follow Users
-> * Filtered Feeds on Category
+ * Likes on Stories
+ * Follow Users
+ * Filtered Feeds on Category

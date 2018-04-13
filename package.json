@@ -1,7 +1,7 @@
 {
   "name": "smedium",
   "version": "1.0.0",
-  "description": "",
+  "description": "Fullstack project with 1 week turnarond",
   "main": "bundle.js",
   "engines": {
     "node": "8.9.4",
@@ -13,7 +13,7 @@
     "start": "webpack --watch"
   },
   "keywords": [],
-  "author": "",
+  "author": "yukichikawada@gmail.com",
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.26.0",
