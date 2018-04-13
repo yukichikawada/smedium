@@ -12,9 +12,7 @@ const CommentsIndexItem = ({ comment }) => (
       </div>
     </div>
     <div className="comment-content">
-      <p>
-        {ReactHtmlParser(comment.body)}
-      </p>
+      {ReactHtmlParser(comment.body)}
     </div>
   </li>
 );

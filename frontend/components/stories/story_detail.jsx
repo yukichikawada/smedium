@@ -55,9 +55,9 @@ class StoryDetail extends React.Component {
   comments() {
     if (this.props.story.comments) {
       return (
-        Object.keys(this.props.story.comments).map(id => {
+        Object.keys(this.props.story.comments).reverse().map(id => {
           return (
-            <CommentsIndexItem key={id} 
+            <CommentsIndexItem key={id}
               comment={this.props.story.comments[id]} />
           )
         })
