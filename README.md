@@ -13,22 +13,22 @@
 
 
 #### Backend
-> * Ruby On Rails
-> * jBuilder
-> * PostgreSQL RDBMS
-> * Heroku
+ * Ruby On Rails
+ * jBuilder
+ * PostgreSQL RDBMS
+ * Heroku
 
 
 #### Frontend
-> * React-Redux
-> * JavaScript
-> * SCSS/CSS
-> * npm
-> * Webpack
+ * React-Redux
+ * JavaScript
+ * SCSS/CSS
+ * npm
+ * Webpack
 
 
 #### Storage
-> * Cloudinary for headline pictures uploaded by Users
+ * Cloudinary for headline pictures uploaded by Users
 
 
 ## Features and Functionality
