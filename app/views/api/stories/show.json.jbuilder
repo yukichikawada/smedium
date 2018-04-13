@@ -1,4 +1,4 @@
-json.extract! @story, :id, :title, :body, :author_id, :likes_count, :comments_count, :created_at, :read_time, :image_url
+json.extract! @story, :id, :title, :body, :author_id, :likes_count, :comments_count, :created_at, :read_time, :image_url, :user_likes
 json.author @story.author.username
 
 json.comments do

@@ -3,11 +3,16 @@ class Story < ApplicationRecord
 
   before_validation :calc_read_time
 
+  has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
+
+  has_many :user_likes,
+    through: :likes,
+    source: :user
+
   belongs_to :author,
     foreign_key: :author_id,
     class_name: 'User'
-  # has_many :likes, :comments, dependent: :destroy
-  has_many :comments, dependent: :destroy
 
   def calc_read_time
     if self.read_time == nil

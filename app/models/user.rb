@@ -2,14 +2,16 @@ class User < ApplicationRecord
   validates :username, :email, :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
+  before_validation :ensure_token
+
   attr_reader :password
 
-  has_many :stories
   has_many :comments
-
-  # :comments, :follows, :story_likes, :comment_likes
-
-  before_validation :ensure_token
+  has_many :likes
+  
+  has_many :liked_stories,
+    through: :likes,
+    source: :story
 
   has_many :stories,
     foreign_key: :author_id,

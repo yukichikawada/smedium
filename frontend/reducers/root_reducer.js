@@ -8,5 +8,5 @@ export default combineReducers({
   entities: entitiesReducer,
   errors: errorsReducer,
   session: sessionReducer,
-  comments: commentsReducer
+  // comments: commentsReducer
 });
