@@ -9,7 +9,7 @@
 > * [Sample State](https://github.com/yukichikawada/smedium/wiki/sample-sate)
 > * [Component Hierarchy](https://github.com/yukichikawada/smedium/wiki/component-hierarchy-with-wireframes)
 
-## Technologies User
+## Technologies Used
 
 
 #### Backend
