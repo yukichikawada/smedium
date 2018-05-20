@@ -48,6 +48,15 @@
 </div>
 ```
 
+## How to: Set up locally
+
+ * ```npm i``` install node_modules
+ * ```bundle``` install gems
+ * ```rails db:create``` initialize postgreSQL db
+ * ```rails db:migrate```
+ * ```rails db:seed```
+ * ```rails s```
+ * ```npm start``` app now running on localhost:3000
 
 
 ## Future Direction
