@@ -82,12 +82,12 @@ class MyNavbar extends React.Component {
     return (
       <div className="navbar-container">
         <Navbar color="light" light expand="md" className="fixed-top container">
-          <Nav className="ml-auto" navbar>
+          <Nav navbar>
             <NavItem>
               {this.upgrade()}
             </NavItem>
           </Nav>
-          <NavbarBrand href="/">Smedium</NavbarBrand>
+          <NavbarBrand href="/" className="ml-auto">Smedium</NavbarBrand>
           {this.session()}
         </Navbar>
       </div>
