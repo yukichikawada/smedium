@@ -11,7 +11,7 @@ import EditStoryFormContainer from './stories/edit_story_form_container';
 import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 
 const Index = () => (
-  <div>
+  <div className="app-index">
     <Route path="/login" component={LoginContainer} />
     <Route path="/signup" component={SignupContainer} />
     <Route path="/" component={NavbarContainer} />
