@@ -1,3 +1,13 @@
+.navbar-container {
+
+}
+.ml-auto {
+  color: black;
+  font-family: 'Abril Fatface', cursive;
+}
+.title {
+  font-size: 34px;
+}
 /* .header-nav {
   max-width: 1000px;
   margin-top: 10px;

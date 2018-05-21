@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import MyNavLinks from './my_nav_links';
+
 import {
   Button,
   Navbar,
@@ -13,6 +15,7 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import Sticky from 'react-stickynode';
 
 class MyNavbar extends React.Component {
   constructor(props) {
@@ -80,16 +83,20 @@ class MyNavbar extends React.Component {
 
   render() {
     return (
-      <div className="navbar-container">
-        <Navbar color="light" light expand="md" className="fixed-top container">
+      <div className="navbar-container container">
+        <Navbar light expand="md">
           <Nav navbar>
             <NavItem>
               {this.upgrade()}
             </NavItem>
           </Nav>
-          <NavbarBrand href="/" className="ml-auto">Smedium</NavbarBrand>
+          <NavbarBrand href="/" className="ml-auto title">Smedium</NavbarBrand>
           {this.session()}
         </Navbar>
+        <Sticky enabled={true}>
+          <MyNavLinks></MyNavLinks>
+        </Sticky>
+
       </div>
     );
   }

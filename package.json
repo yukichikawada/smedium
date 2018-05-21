@@ -32,6 +32,7 @@
     "react-quill": "^1.2.7",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
+    "react-stickynode": "^1.4.1",
     "reactstrap": "^6.0.1",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",

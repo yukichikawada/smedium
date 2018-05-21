@@ -1,0 +1,17 @@
+.nav-links-container {
+  background-color: white;
+  width: 840px;
+  margin: auto;
+  height: 50px;
+  box-shadow: 0 5px 5px -5px #333;
+}
+.helper {
+  padding-top: 18px;
+}
+.nav-links {
+  display: inline;
+  padding-left: 14px;
+  font-size: 13px;
+  letter-spacing: 1.4px;
+  color: grey;
+}
