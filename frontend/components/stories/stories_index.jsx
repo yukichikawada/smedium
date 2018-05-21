@@ -16,7 +16,7 @@ class StoriesIndex extends React.Component {
     });
 
     return (
-      <div className="container">
+      <div className="stories-index">
         <ul className="container-index-item">
           {stories}
         </ul>

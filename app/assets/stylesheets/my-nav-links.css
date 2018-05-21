@@ -1,9 +1,12 @@
 .nav-links-container {
   background-color: white;
+  width: 99vw;
+  height: 50px;
+  box-shadow: 0 3px 2px -2px #dcdcdc;
+}
+.nav-links-content {
   width: 840px;
   margin: auto;
-  height: 50px;
-  box-shadow: 0 2px 2px -2px #333;
 }
 .helper {
   padding-top: 18px;

@@ -27,7 +27,9 @@ class MyNavLinks extends React.Component {
 
     return (
       <div className="nav-links-container">
-        <ul className="helper">{links}</ul>
+        <div className="nav-links-content">
+          <ul className="helper">{links}</ul>
+        </div>
       </div>
     )
   }

@@ -8,6 +8,17 @@
 .title {
   font-size: 34px;
 }
+.upgrade {
+  border: 1px solid lightgrey;
+}
+.upgrade:hover {
+  border: 1px solid black;
+  background: white;
+  color: grey;
+}
+.signout-button:hover {
+  cursor: pointer;
+}
 /* .header-nav {
   max-width: 1000px;
   margin-top: 10px;

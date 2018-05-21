@@ -51,7 +51,9 @@ class MyNavbar extends React.Component {
             <DropdownItem disabled>Settings</DropdownItem>
             <DropdownItem disabled>Help</DropdownItem>
             <DropdownItem disabled>Help</DropdownItem>
-            <DropdownItem onClick={this.props.logout}>Sign out</DropdownItem>
+            <DropdownItem onClick={this.props.logout} className="signout-button">
+              Sign out
+            </DropdownItem>
           </DropdownMenu>
         </UncontrolledDropdown>
       </Nav>
@@ -67,7 +69,7 @@ class MyNavbar extends React.Component {
 
   upgrade() {
     let plan = this.props.currentUser ? (
-      <Button outline color="secondary" size="sm">Upgrade</Button>
+      <Button outline size="sm" className="upgrade">Upgrade</Button>
     ) : (
       <NavLink href="/">About membership</NavLink>
     )
@@ -83,20 +85,21 @@ class MyNavbar extends React.Component {
 
   render() {
     return (
-      <div className="navbar-container container">
-        <Navbar light expand="md">
-          <Nav navbar>
-            <NavItem>
-              {this.upgrade()}
-            </NavItem>
-          </Nav>
-          <NavbarBrand href="/" className="ml-auto title">Smedium</NavbarBrand>
-          {this.session()}
-        </Navbar>
+      <div className="navbar-container">
+        <div className="nav-header container">
+          <Navbar light expand="md">
+            <Nav navbar>
+              <NavItem>
+                {this.upgrade()}
+              </NavItem>
+            </Nav>
+            <NavbarBrand href="/" className="ml-auto title">Smedium</NavbarBrand>
+            {this.session()}
+          </Navbar>
+        </div>
         <Sticky enabled={true}>
           <MyNavLinks></MyNavLinks>
         </Sticky>
-
       </div>
     );
   }
