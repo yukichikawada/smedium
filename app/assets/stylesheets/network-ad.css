@@ -1,0 +1,56 @@
+.network-ad {
+  width: 320px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #b3ecff;
+  padding: 10px;
+  height: 120px;
+}
+.ad-title {
+  padding-top: 30px;
+  padding-left: 10px;
+  width: 150px;
+}
+.oval {
+  height: 100px;
+  width: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.ad-img {
+  margin: auto;
+  height: 100px;
+  width: auto;
+}
+.ad-body {
+  background-color: #f2f2f2;
+  height: 400px;
+}
+.ad-content {
+  padding: 32px;
+}
+.single-ad {
+  display: flex;
+  padding-bottom: 30px;
+}
+.ad-icon {
+  padding: 10px;
+}
+.ad-blurb {
+  padding-left: 10px;
+  height: 65px;
+}
+.single-ad-title {
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.ad-author {
+  padding-top: 10px;
+  font-size: 12px;
+}
+.grey-ify {
+  color: grey;
+}

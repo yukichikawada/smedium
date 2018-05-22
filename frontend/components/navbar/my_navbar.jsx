@@ -29,11 +29,11 @@ class MyNavbar extends React.Component {
           <NavLink href="/"><FontAwesomeIcon icon="search"/></NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/"><FontAwesomeIcon icon="bell"/></NavLink>
+          <NavLink href="/"><FontAwesomeIcon icon={['far', 'bell']} /></NavLink>
         </NavItem>
         <UncontrolledDropdown nav inNavbar>
           <DropdownToggle nav>
-            <FontAwesomeIcon icon="user"/>
+            <FontAwesomeIcon icon={['far','user']}/>
           </DropdownToggle>
           <DropdownMenu right>
             <DropdownItem disabled>Become a member</DropdownItem>

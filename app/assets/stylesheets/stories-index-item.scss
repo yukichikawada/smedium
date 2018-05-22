@@ -1,7 +1,7 @@
 .stories-index-item {
   // border: 1px solid black;
   margin-bottom: 40px;
-  max-width: 656px;
+  max-width: 600px;
   height: 120px;
   display: flex;
   justify-content: space-between;
@@ -9,9 +9,12 @@
   .story-item-link {
     text-decoration: none;
     display: flex;
+    width: 480px;
+
     .link-content {
       margin-left: 20px;
       display: flex;
+      width: 90%;
       flex-direction: column;
       justify-content: space-between;
 
@@ -35,26 +38,34 @@
         }
       }
 
-      .story-item-author {
-        color: black;
-        line-height: 1;
-        font-size: 12px;
-      }
-      .story-item-stats {
-        margin-top: 4px;
-        line-height: 1;
-        color: rgba(0,0,0,.54);
-        font-size: 12px;
-      }
-      .story-item-stats {
-        font-weight: 900;
+      .lower-bib {
+        display: flex;
+        justify-content: space-between;
+
+        .story-item-author {
+          color: black;
+          line-height: 1;
+          font-size: 12px;
+        }
+        .story-item-stats {
+          margin-top: 4px;
+          line-height: 1;
+          color: rgba(0,0,0,.54);
+          font-size: 12px;
+        }
+        .story-item-stats {
+          font-weight: 900;
+        }
+        .greyed-out {
+          color: grey;
+        }
       }
     }
   }
 
   .image-container {
-    height: 120px;
-    width: 120px;
+    height: 150px;
+    width: 150px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

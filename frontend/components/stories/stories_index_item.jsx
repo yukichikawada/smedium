@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ReactHtmlParser from 'react-html-parser';
 
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+
 const StoriesIndexItem = ({ story }) => (
   <li className="stories-index-item">
     <Link to={`/stories/${story.id}`} className="story-item-link">
@@ -13,12 +15,21 @@ const StoriesIndexItem = ({ story }) => (
           </div>
         </div>
         <div className="lower-bib">
-          <p className="story-item-author">{story.author}</p>
-          <p className="story-item-stats">{new Date(story.created_at).toDateString().slice(4, 10)} ~ {story.read_time} min read</p>
+          <span>
+            <p className="story-item-author">{story.author}</p>
+            <p className="story-item-stats">
+              {
+                new Date(story.created_at)
+                .toDateString().slice(4, 10)
+              } ~ {story.read_time} min read
+            </p>
+          </span>
+          <FontAwesomeIcon icon={['far', 'bookmark']} className="greyed-out"/>
         </div>
       </div>
     </Link>
-    <div className="image-container" style={{backgroundImage: `url(${story.image_url})`}}>
+    <div className="image-container"
+      style={{backgroundImage: `url(${story.image_url})`}}>
     </div>
   </li>
 );

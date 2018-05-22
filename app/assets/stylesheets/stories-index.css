@@ -1,7 +1,10 @@
 .stories-index {
-  
+  display: flex;
+  width: 1000px;
+  margin: auto;
+  padding-top: 40px;
 }
 .container-index-item {
   width: 657px;
-  margin: auto;
+  /* margin: auto; */
 }

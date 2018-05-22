@@ -1,7 +1,11 @@
 import React from 'react';
 
+import Sticky from 'react-stickynode';
+
 import CreateStoryContainer from './create_story_form_container';
 import StoriesIndexItem from './stories_index_item';
+import NetworkAd from '../extras/network_ad';
+import PopularAd from '../extras/popular_ad';
 
 class StoriesIndex extends React.Component {
   componentDidMount() {
@@ -11,7 +15,7 @@ class StoriesIndex extends React.Component {
   render() {
     const stories = this.props.stories.map(story => {
       return (
-        <StoriesIndexItem key={story.id} story={story} className="stories-index-item"/>
+        <StoriesIndexItem key={story.id} story={story} className="smaller"/>
       );
     });
 
@@ -20,6 +24,12 @@ class StoriesIndex extends React.Component {
         <ul className="container-index-item">
           {stories}
         </ul>
+        <div>
+          <NetworkAd></NetworkAd>
+          <Sticky enabled={true} top={50}>
+            <PopularAd></PopularAd>
+          </Sticky>
+        </div>
       </div>
     );
   }
