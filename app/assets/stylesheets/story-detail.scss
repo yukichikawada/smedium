@@ -98,5 +98,21 @@
     width: 640px;
     margin: auto;
     padding-top: 50px;
+
+    .registration-container {
+      height: 200px;
+
+      .registration-content {
+        padding: 32px;
+
+        .registration-prompt {
+          text-align: center;
+
+          .blue-signin {
+            color: green;
+          }
+        }
+      }
+    }
   }
 }

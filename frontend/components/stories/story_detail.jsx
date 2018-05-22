@@ -82,6 +82,23 @@ class StoryDetail extends React.Component {
       </div>
     )
 
+    const commentsPrompt = this.props.currentUser ? (
+      <div>
+        <SemiProtectedRoute component={CommentFormContainer} path={`/stories/${story.id}`} storyId={story.id} />
+        <ul>
+          {this.comments()}
+        </ul>
+      </div>
+    ) : (
+      <div className="registration-container">
+        <div className="registration-content">
+          <h4 className="registration-prompt">
+            <Link to="/login" className="blue-signin">Sign in</Link> or <Link to="/signup">Sign up</Link> to have access to comments!
+          </h4>
+        </div>
+      </div>
+    )
+
     return(
       <article className="article-container">
         <header className="story-bib">
@@ -99,13 +116,12 @@ class StoryDetail extends React.Component {
         <section>
           <h1 className="article-story-title">{story.title}</h1>
           {uploadedPic}
+          <hr></hr>
           <div className="article-story-body">{ReactHtmlParser(story.body)}</div>
         </section>
+        <hr></hr>
         <section className="article-comments-container">
-          <SemiProtectedRoute component={CommentFormContainer} path={`/stories/${story.id}`} storyId={story.id} />
-          <ul>
-            {this.comments()}
-          </ul>
+          {commentsPrompt}
         </section>
       </article>
     )

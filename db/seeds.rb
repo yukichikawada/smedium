@@ -14,7 +14,7 @@ larissa = User.create({username: 'Larissa', password: 'password', email: 'lariss
 ben = User.create({username: 'Ben', password: 'password', email: 'ben@thompson.com'})
 
 story1 = Story.create({
-  title: 'NC: Monopoly At The Breaking Point',
+  title: 'NC: Best family blog',
   body: 'This is a story about the big bad wolf, actually. Sometimes confused with the pigs that go to market. None of these little pigs made it home.',
   author_id: yves.id,
   image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523469586/u36kzlcfsoe0qdorolrn.jpg',
@@ -22,7 +22,7 @@ story1 = Story.create({
 })
 story2 = Story.create({
   title: 'We Aint Got No History',
-  body: 'The best blog about CFC. KTBFFH!!!!',
+  body: 'THE blog about CFC. KTBFFH!!!!',
   author_id: david.id,
   image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523468747/ftrtdcbnylu1w8wrj1fi.jpg',
   read_time: 4
@@ -36,14 +36,14 @@ story3 = Story.create({
 })
 story4 = Story.create({
   title: "What it's like to Grow Up",
-  body: 'Awesome rhythm and perfect flow. Someone pay her to write more',
+  body: 'Awesome rhythm and perfect flow. Someone pay her to write more, please.',
   author_id: chelsea.id,
   image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523464310/sample.jpg',
   read_time: 9
 })
 story5 = Story.create({
-  title: 'More tinyletters: A Love Story',
-  body: 'Another writer who delicately warms the soul',
+  title: 'Tinyletters: A Love Story',
+  body: 'What would I do without these wonderful things appearing in my inbox?',
   author_id: larissa.id,
   image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523469282/wjc0aqrn64pju4zrlvlo.jpg',
   read_time: 17
@@ -54,7 +54,87 @@ story6 = Story.create({
   body: 'Subscription as a service, give him more subscribers',
   author_id: ben.id,
   image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523469500/ndmi8mztwr1vocow0fgk.jpg',
-  read_time: 17
+  read_time: 3
+})
+
+story7 = Story.create({
+  title: 'Prizefighter: A nice beginning',
+  body: 'A friendly bar in Emeryville. Ill never forget how nice they were to me :)',
+  author_id: chelsea.id,
+  image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523651170/qjqrlhkxurk98t8n0jpv.jpg',
+  read_time: 9
+})
+
+story8 = Story.create({
+  title: "Eli's Mile High Club",
+  body: 'A place that has gone thru a transformation. Unfortunately people are getting territorial about it.',
+  author_id: larissa.id,
+  image_url: 'https://res-console.cloudinary.com/dh5e4xxbr/thumbnails/v1/image/upload/v1526959794/ZTBua3F3aGlpM3Bkd2Y3b293YWE=/grid',
+  read_time: 5
+})
+
+story9 = Story.create({
+  title: "Arizmendi Pizza FTW",
+  body: 'Do you love pizza? How many times can you say you love pizza? A pizza showdown.',
+  author_id: david.id,
+  image_url: 'https://res-console.cloudinary.com/dh5e4xxbr/thumbnails/v1/image/upload/v1526959715/YnBtcDVvdTNreWxqOHRjdmYyb2U=/grid',
+  read_time: 24
+})
+
+story10 = Story.create({
+  title: "Red Cotton Demin",
+  body: 'Camilo Love is a nice guy who makes cool jeans. Hopefully he kills it.',
+  author_id: lambert.id,
+  image_url: 'https://res-console.cloudinary.com/dh5e4xxbr/thumbnails/v1/image/upload/v1523488623/dTJxZW1udndmeXB2N3VwZjN1bTA=/grid',
+  read_time: 11
+})
+
+story11 = Story.create({
+  title: "The Real McCoy: Bucco J-22",
+  body: 'Have you ever dreamed about a jacket so hard it magically was made?',
+  author_id: yves.id,
+  image_url: 'https://res-console.cloudinary.com/dh5e4xxbr/thumbnails/v1/image/upload/v1523643704/am5panJ2cTd4OGNhanVwbmdpb3k=/grid',
+  read_time: 6
+})
+
+story12 = Story.create({
+  title: "SF City FC - only team in the City",
+  body: 'Are they gonna make a solid run in the Open this year?',
+  author_id: lambert.id,
+  image_url: 'https://res-console.cloudinary.com/dh5e4xxbr/thumbnails/v1/image/upload/v1523479126/a2cwdm14ZXk4dGR4Zm8wemloZ3Q=/grid',
+  read_time: 20
+})
+
+story13 = Story.create({
+  title: "Do you bbq?",
+  body: 'What are your thoughts on brining? You see, I insist on ribs going in a brine. Nothing crazy like 24 hours but definitely a few.',
+  author_id: lambert.id,
+  image_url: 'https://res-console.cloudinary.com/dh5e4xxbr/thumbnails/v1/image/upload/v1523485269/azRneGY4dXZpeWs3aGprY3Uzem8=/grid',
+  read_time: 185
+})
+
+story14 = Story.create({
+  title: "Yakiniku yaitemo ie yakuna!",
+  body: 'Such a funny commercial. I think it was an ad for a yakiniku sauce that aired over 10 years ago at this point',
+  author_id: chelsea.id,
+  image_url: 'https://res-console.cloudinary.com/dh5e4xxbr/thumbnails/v1/image/upload/v1523485269/azRneGY4dXZpeWs3aGprY3Uzem8=/grid',
+  read_time: 3
+})
+
+story15 = Story.create({
+  title: "Can I pay you in gum?",
+  body: 'Another funny commercial. Where did all the good commercials go? That one year nearly all the commercials for the Superb Bowl were tear jerkers.',
+  author_id: larissa.id,
+  image_url: 'https://res-console.cloudinary.com/dh5e4xxbr/thumbnails/v1/image/upload/v1523478778/eXBqa2tqNmh6eGNqY3BvdDJlbXg=/grid',
+  read_time: 5
+})
+
+story16 = Story.create({
+  title: "My sisters birthday!",
+  body: 'Today she turns 24. Hopefully she is learning how to have a good time. She stresses out too much.',
+  author_id: ben.id,
+  image_url: 'https://res-console.cloudinary.com/dh5e4xxbr/thumbnails/v1/image/upload/v1523488692/Z29zd25pcnp6aGtleWJpbmxmbGs=/grid',
+  read_time: 24
 })
 
 Comment.create({
