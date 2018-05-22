@@ -1,6 +1,6 @@
 import React from 'react';
 
-import StoriesIndexItem from './comment_index_item';
+import CommentsIndexItem from './comment_index_item';
 
 class CommentsIndex extends React.Component {
   componentDidMount() {
@@ -10,7 +10,7 @@ class CommentsIndex extends React.Component {
   render() {
     const comments = this.props.comments.map(comment => {
       return (
-        <StoriesIndexItem key={comment.id} comment={comment} />
+        <CommentsIndexItem key={comment.id} comment={comment} />
       )
     })
     return (

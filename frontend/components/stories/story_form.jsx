@@ -69,7 +69,6 @@ class StoryForm extends React.Component {
     return (
       <div className="container">
         <p className="partner-program"></p>
-        <hr></hr>
         <div className="content">
           <ul>{this.errors()}</ul>
           <h3>{this.props.formType}</h3>

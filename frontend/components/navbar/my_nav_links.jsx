@@ -20,7 +20,7 @@ class MyNavLinks extends React.Component {
     const links = Object.keys(ALL_LINKS).map(key => {
       return (
         <li key={key} className="nav-links">
-          <Link to="/" className="cat-link">{ALL_LINKS[key]}</Link>
+          <Link to="/about" className="cat-link">{ALL_LINKS[key]}</Link>
         </li>
       )
     });
