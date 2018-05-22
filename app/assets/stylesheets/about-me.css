@@ -1,0 +1,17 @@
+.intro-header {
+  font-family: 'Abril Fatface', cursive;
+}
+.pic-linebreak {
+  background-color: #b3ecff;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.about-job-title {
+  color: white;
+  font-family: 'Abril Fatface', cursive;
+  padding: 32px;
+}
+.about-me-profile-pic {
+  height: 300px;
+}
