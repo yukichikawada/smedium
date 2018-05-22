@@ -69,7 +69,7 @@ story8 = Story.create({
   title: "Eli's Mile High Club",
   body: 'A place that has gone thru a transformation. Unfortunately people are getting territorial about it.',
   author_id: larissa.id,
-  image_url: 'https://res-console.cloudinary.com/dh5e4xxbr/thumbnails/v1/image/upload/v1526959794/ZTBua3F3aGlpM3Bkd2Y3b293YWE=/grid',
+  image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523489754/ifu43dsrhkfdmncvoaem.jpg',
   read_time: 5
 })
 
@@ -77,7 +77,7 @@ story9 = Story.create({
   title: "Arizmendi Pizza FTW",
   body: 'Do you love pizza? How many times can you say you love pizza? A pizza showdown.',
   author_id: david.id,
-  image_url: 'https://res-console.cloudinary.com/dh5e4xxbr/thumbnails/v1/image/upload/v1526959715/YnBtcDVvdTNreWxqOHRjdmYyb2U=/grid',
+  image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523489833/ntulijycq1uqpsxipzcm.jpg',
   read_time: 24
 })
 
@@ -85,7 +85,7 @@ story10 = Story.create({
   title: "Red Cotton Demin",
   body: 'Camilo Love is a nice guy who makes cool jeans. Hopefully he kills it.',
   author_id: lambert.id,
-  image_url: 'https://res-console.cloudinary.com/dh5e4xxbr/thumbnails/v1/image/upload/v1523488623/dTJxZW1udndmeXB2N3VwZjN1bTA=/grid',
+  image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523488623/u2qemnvwfypv7upf3um0.png',
   read_time: 11
 })
 
@@ -93,7 +93,7 @@ story11 = Story.create({
   title: "The Real McCoy: Bucco J-22",
   body: 'Have you ever dreamed about a jacket so hard it magically was made?',
   author_id: yves.id,
-  image_url: 'https://res-console.cloudinary.com/dh5e4xxbr/thumbnails/v1/image/upload/v1523643704/am5panJ2cTd4OGNhanVwbmdpb3k=/grid',
+  image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1526959794/e0nkqwhii3pdwf7oowaa.jpg',
   read_time: 6
 })
 
@@ -101,7 +101,7 @@ story12 = Story.create({
   title: "SF City FC - only team in the City",
   body: 'Are they gonna make a solid run in the Open this year?',
   author_id: lambert.id,
-  image_url: 'https://res-console.cloudinary.com/dh5e4xxbr/thumbnails/v1/image/upload/v1523479126/a2cwdm14ZXk4dGR4Zm8wemloZ3Q=/grid',
+  image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523479126/kg0vmxey8tdxfo0zihgt.png',
   read_time: 20
 })
 
@@ -109,7 +109,7 @@ story13 = Story.create({
   title: "Do you bbq?",
   body: 'What are your thoughts on brining? You see, I insist on ribs going in a brine. Nothing crazy like 24 hours but definitely a few.',
   author_id: lambert.id,
-  image_url: 'https://res-console.cloudinary.com/dh5e4xxbr/thumbnails/v1/image/upload/v1523485269/azRneGY4dXZpeWs3aGprY3Uzem8=/grid',
+  image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523485269/k4gxf8uviyk7hjkcu3zo.png',
   read_time: 185
 })
 
@@ -117,7 +117,7 @@ story14 = Story.create({
   title: "Yakiniku yaitemo ie yakuna!",
   body: 'Such a funny commercial. I think it was an ad for a yakiniku sauce that aired over 10 years ago at this point',
   author_id: chelsea.id,
-  image_url: 'https://res-console.cloudinary.com/dh5e4xxbr/thumbnails/v1/image/upload/v1523485269/azRneGY4dXZpeWs3aGprY3Uzem8=/grid',
+  image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523643704/jnijrvq7x8cajupngioy.jpg',
   read_time: 3
 })
 
@@ -125,7 +125,7 @@ story15 = Story.create({
   title: "Can I pay you in gum?",
   body: 'Another funny commercial. Where did all the good commercials go? That one year nearly all the commercials for the Superb Bowl were tear jerkers.',
   author_id: larissa.id,
-  image_url: 'https://res-console.cloudinary.com/dh5e4xxbr/thumbnails/v1/image/upload/v1523478778/eXBqa2tqNmh6eGNqY3BvdDJlbXg=/grid',
+  image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523472583/g6wrdldapfsqw0des1ct.jpg',
   read_time: 5
 })
 
@@ -133,7 +133,7 @@ story16 = Story.create({
   title: "My sisters birthday!",
   body: 'Today she turns 24. Hopefully she is learning how to have a good time. She stresses out too much.',
   author_id: ben.id,
-  image_url: 'https://res-console.cloudinary.com/dh5e4xxbr/thumbnails/v1/image/upload/v1523488692/Z29zd25pcnp6aGtleWJpbmxmbGs=/grid',
+  image_url: 'https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523481414/f6y7rufxhgvyg40zee6a.jpg',
   read_time: 24
 })
 

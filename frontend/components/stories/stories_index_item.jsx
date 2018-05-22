@@ -11,7 +11,7 @@ const StoriesIndexItem = ({ story }) => {
     </div>
   ) : (
     <div className="image-container"
-      style={{backgroundImage: `url(https://bit.ly/2KJpb5E})`}} >
+      style={{backgroundImage: `url(https://res.cloudinary.com/dh5e4xxbr/image/upload/v1524181599/hev8wfmhyshxody0bniq.jpg})`}} >
     </div>
   )
 
