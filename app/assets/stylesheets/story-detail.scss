@@ -5,8 +5,34 @@
 
   .story-bib {
     display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
     justify-content: space-between;
 
+    .comment-header {
+      display: flex;
+      align-items: center;
+      .comment-card-profile-pic {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .comment-card-bib {
+        margin-left: 10px;
+
+        .comment-author {
+          color: #4286f4;
+          font-size: 14px;
+        }
+        .comment-date {
+          color: grey;
+          font-size: 12px;
+        }
+      }
+    }
     .story-left {
 
       .story-bib-author {
@@ -56,12 +82,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 500px;
+    margin-top: 40px;
     margin-bottom: 40px;
   }
 
   .article-story-body {
-    font-family: 'Merriweather', serif;
-    font-size: 16px;
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: 1.4;
     color: #3e4040;
   }
 

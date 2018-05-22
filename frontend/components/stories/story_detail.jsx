@@ -72,12 +72,25 @@ class StoryDetail extends React.Component {
       return null;
     }
 
+    const uploadedPic = story.image_url ? (
+      <div className="story-detail-image"
+        style={{backgroundImage: `url(${story.image_url})`}} >
+      </div>
+    ) : (
+      <div className="story-detail-image"
+        style={{backgroundImage: `url(https://bit.ly/2KJpb5E})`}} >
+      </div>
+    )
+
     return(
       <article className="article-container">
         <header className="story-bib">
-          <div className="story-left">
-            <h4 className="story-bib-author">{story.author}</h4>
-            <h4 className="story-bib-date">{new Date(story.created_at).toDateString().slice(4, 16)} ~ {story.read_time} min read</h4>
+          <div className="comment-header">
+            <img className="comment-card-profile-pic" style={{backgroundImage: `url(https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523555382/yuk7copy.png)`}} />
+            <div className="comment-card-bib">
+              <h5 className="comment-author">{story.author}</h5>
+              <h5 className="comment-date">{new Date(story.created_at).toDateString()}</h5>
+            </div>
           </div>
           <div className="story-right">
              {this.editLink()}
@@ -85,8 +98,7 @@ class StoryDetail extends React.Component {
         </header>
         <section>
           <h1 className="article-story-title">{story.title}</h1>
-          <div className="story-detail-image" style={{backgroundImage: `url(${story.image_url})`}} >
-          </div>
+          {uploadedPic}
           <div className="article-story-body">{ReactHtmlParser(story.body)}</div>
         </section>
         <section className="article-comments-container">
