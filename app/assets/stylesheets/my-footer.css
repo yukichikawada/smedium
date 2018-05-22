@@ -1,0 +1,16 @@
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+}
+.footer-li {
+  padding-right: 14px;
+  font-size: 14px;
+}
+.footer-link {
+  color: grey;
+}
+.footer-link:hoover {
+  text-decoration: none;
+  color: black;
+}

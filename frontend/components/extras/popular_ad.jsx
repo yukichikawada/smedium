@@ -1,7 +1,7 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 
+import MyFooter from './my_footer'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 class PoplarAd extends React.Component {
@@ -10,8 +10,8 @@ class PoplarAd extends React.Component {
       <aside className="popular-ad">
         <header className="popular-header">
           <h5>Popular on Smedium</h5>
-          <hr className="min-line-height"></hr>
         </header>
+        <hr className="min-line-height"></hr>
         <div className="">
           <div className="ad-content">
             <div className="single-ad">
@@ -54,6 +54,8 @@ class PoplarAd extends React.Component {
                 <p className="ad-author grey-ify">May 17 ~ 1 min read</p>
               </div>
             </div>
+            <hr></hr>
+            <MyFooter></MyFooter>
           </div>
         </div>
       </aside>
