@@ -58,10 +58,18 @@ class MyNavbar extends React.Component {
         </UncontrolledDropdown>
       </Nav>
     ) : (
-      <div className="login-signup-buttons">
-        <Link to="/login" className="sign-in-button link-new-story button-link">Sign in</Link>
-        <Link to="/signup" className="sign-up-button link-new-story button-link">Get started</Link>
-      </div>
+      <Nav className="ml-auto" navbar>
+        <NavItem>
+          <NavLink href="/#/login">
+            <span  className="sign-in">Sign in</span>
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <Button outline color="success" href="/#/signup">
+            Get Started
+          </Button>
+        </NavItem>
+      </Nav>
     )
 
     return user;
@@ -69,9 +77,13 @@ class MyNavbar extends React.Component {
 
   upgrade() {
     let plan = this.props.currentUser ? (
-      <Button outline size="sm" className="upgrade">Upgrade</Button>
+      <Button outline size="sm" className="upgrade">
+        <a href="/#/about" className="about-link-button">Upgrade</a>
+      </Button>
     ) : (
-      <NavLink href="/">About membership</NavLink>
+      <Button outline size="sm" className="upgrade">
+        <a href="/#/about" className="about-link-button">About</a>
+      </Button>
     )
 
     return plan;

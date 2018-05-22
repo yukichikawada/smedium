@@ -1,5 +1,9 @@
+.about-me-container {
+  padding-bottom: 10px;
+}
 .intro-header {
   font-family: 'Abril Fatface', cursive;
+  padding: 32px;
 }
 .pic-linebreak {
   background-color: #b3ecff;
@@ -7,11 +11,56 @@
   display: flex;
   justify-content: space-between;
 }
+.about-card-container {
+  padding: 32px;
+}
 .about-job-title {
   color: white;
   font-family: 'Abril Fatface', cursive;
-  padding: 32px;
+}
+.about-me-p {
+  padding-top: 20px;
+  line-height: 1.5;
 }
 .about-me-profile-pic {
   height: 300px;
+}
+.about-more {
+  text-align: center;
+  padding-top: 20px;
+}
+.about-lower {
+  width: 1000px;
+  margin: auto;
+}
+.about-cards-continued {
+  /* display: flex;
+  justify-content: space-between; */
+}
+.about-card-mini {
+  box-shadow: 10px 5px 5px lightgrey;
+  width: 450px;
+  margin: auto;
+  margin-top: 50px;
+  border: 1px solid lightgrey;
+}
+.about-card-p {
+  line-height: 1.5;
+}
+.about-end {
+  margin: 32px;
+  padding-top: 50px;
+  background-color: #f2f2f2;
+}
+.last-line {
+  padding-bottom: 50px;
+}
+.indent-left {
+  padding-left: 32px;
+}
+.email-address {
+  text-align: right;
+}
+.actual-address {
+
 }

@@ -16,9 +16,26 @@
   background: white;
   color: grey;
 }
+.about-link-button {
+  text-decoration: none;
+  color: inherit;
+}
+.about-link-button:hover {
+  text-decoration: none;
+  color: grey;
+}
 .signout-button:hover {
   cursor: pointer;
 }
+.sign-in {
+  color: #03a87c;
+  display: inline-block;
+  padding-top: 2px;
+}
+.sign-in:hover {
+  color: green;
+}
+
 /* .header-nav {
   max-width: 1000px;
   margin-top: 10px;
