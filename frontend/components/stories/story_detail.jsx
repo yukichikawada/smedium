@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ReactHtmlParser from 'react-html-parser';
+import ReactHtmlParser from 'react-html-parser';import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-119868044-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 import CommentsIndexItem from '../comments/comments_index_item';
 import CommentFormContainer from '../comments/comment_form_container';

@@ -1,5 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-119868044-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 class Signup extends React.Component {
   constructor(props) {

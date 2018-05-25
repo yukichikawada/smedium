@@ -3,6 +3,10 @@ import { withRouter } from 'react-router-dom';
 import ReactQuill from 'react-quill';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-119868044-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const CLOUDINARY_UPLOAD_PRESET = 'hylawjlm';
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dh5e4xxbr/upload';

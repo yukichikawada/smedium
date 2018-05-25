@@ -1,6 +1,9 @@
 import React from 'react';
-
 import Sticky from 'react-stickynode';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-119868044-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 import CreateStoryContainer from './create_story_form_container';
 import StoriesIndexItem from './stories_index_item';
