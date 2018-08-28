@@ -1,5 +1,7 @@
 # Smedium
 
+[Heroku link](https://yk-smedium.herokuapp.com/) & [backup heroku link](https://protected-hollows-63082.herokuapp.com/#/)
+
 ## Introduction
 
 > Smedium is a Medium clone for thoughtful blogging, elegant design, and engaging community.
